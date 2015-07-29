@@ -5,8 +5,8 @@ return new \Phalcon\Config(array(
 		'adapter'  => 'Mysql',
 		'host'     => 'localhost',
 		'username' => 'root',
-		'password' => 'aaa',
-		'name'     => 'blog',
+		'password' => '',
+		'name'     => '',
 	),
 	'application' => array(
 		'controllersDir' => __DIR__ . '/../controllers/',
