@@ -8,7 +8,7 @@
 
 namespace Bolar\Admin\Controllers;
 
-use Bolar\Frontend\Controllers\ControllerBase;
+use Bolar\Admin\Controllers\ControllerBase;
 use Bolar\Frontend\Models\Users;
 use Phalcon\Flash\Direct as FlashDirect;
 

@@ -1,0 +1,58 @@
+[Wed Jul 29 22:06:22.378637 2015] [:error] [pid 12074] [client 127.0.0.1:49389] PHP Fatal error:  Class 'Bolar\\Frontend\\Controllers\\ControllerBase' not found in /var/www/Agency-website/apps/admin/controllers/IndexController.php on line 16
+[Wed Jul 29 22:06:22.378681 2015] [:error] [pid 12074] [client 127.0.0.1:49389] PHP Stack trace:
+[Wed Jul 29 22:06:22.378696 2015] [:error] [pid 12074] [client 127.0.0.1:49389] PHP   1. {main}() /var/www/Agency-website/public/index.php:0
+[Wed Jul 29 22:06:22.378705 2015] [:error] [pid 12074] [client 127.0.0.1:49389] PHP   2. Phalcon\\Mvc\\Application->handle() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:06:22.378713 2015] [:error] [pid 12074] [client 127.0.0.1:49389] PHP   3. Phalcon\\Dispatcher->dispatch() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:06:22.378719 2015] [:error] [pid 12074] [client 127.0.0.1:49389] PHP   4. spl_autoload_call() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:06:22.378726 2015] [:error] [pid 12074] [client 127.0.0.1:49389] PHP   5. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:06:22.378732 2015] [:error] [pid 12074] [client 127.0.0.1:49389] PHP   6. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:05.912690 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP Fatal error:  Class 'Bolar\\Frontend\\Controllers\\ControllerBase' not found in /var/www/Agency-website/apps/admin/controllers/IndexController.php on line 16
+[Wed Jul 29 22:07:05.912725 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP Stack trace:
+[Wed Jul 29 22:07:05.912737 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   1. {main}() /var/www/Agency-website/public/index.php:0
+[Wed Jul 29 22:07:05.912745 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   2. Phalcon\\Mvc\\Application->handle() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:05.912754 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   3. Phalcon\\Dispatcher->dispatch() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:05.912762 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   4. spl_autoload_call() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:05.912769 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   5. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:05.912776 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   6. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:06.902680 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP Fatal error:  Class 'Bolar\\Frontend\\Controllers\\ControllerBase' not found in /var/www/Agency-website/apps/admin/controllers/IndexController.php on line 16
+[Wed Jul 29 22:07:06.902701 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP Stack trace:
+[Wed Jul 29 22:07:06.902717 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   1. {main}() /var/www/Agency-website/public/index.php:0
+[Wed Jul 29 22:07:06.902721 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   2. Phalcon\\Mvc\\Application->handle() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:06.902725 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   3. Phalcon\\Dispatcher->dispatch() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:06.902729 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   4. spl_autoload_call() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:06.902733 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   5. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:06.902737 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   6. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.166443 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP Fatal error:  Class 'Bolar\\Frontend\\Controllers\\ControllerBase' not found in /var/www/Agency-website/apps/admin/controllers/IndexController.php on line 16
+[Wed Jul 29 22:07:07.166471 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP Stack trace:
+[Wed Jul 29 22:07:07.166477 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   1. {main}() /var/www/Agency-website/public/index.php:0
+[Wed Jul 29 22:07:07.166481 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   2. Phalcon\\Mvc\\Application->handle() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.166485 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   3. Phalcon\\Dispatcher->dispatch() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.166489 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   4. spl_autoload_call() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.166493 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   5. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.166496 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   6. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.294588 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP Fatal error:  Class 'Bolar\\Frontend\\Controllers\\ControllerBase' not found in /var/www/Agency-website/apps/admin/controllers/IndexController.php on line 16
+[Wed Jul 29 22:07:07.294607 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP Stack trace:
+[Wed Jul 29 22:07:07.294613 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   1. {main}() /var/www/Agency-website/public/index.php:0
+[Wed Jul 29 22:07:07.294617 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   2. Phalcon\\Mvc\\Application->handle() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.294621 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   3. Phalcon\\Dispatcher->dispatch() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.294624 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   4. spl_autoload_call() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.294628 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   5. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:07:07.294631 2015] [:error] [pid 12041] [client 127.0.0.1:49393] PHP   6. Phalcon\\Loader->autoLoad() /var/www/Agency-website/public/index.php:30
+[Wed Jul 29 22:08:36.844349 2015] [:error] [pid 12037] [client 127.0.0.1:49413] PHP Warning:  require(/var/www/Agency-website/public/admin/../config/services.php): failed to open stream: No such file or directory in /var/www/Agency-website/public/admin/index.php on line 13
+[Wed Jul 29 22:08:36.844395 2015] [:error] [pid 12037] [client 127.0.0.1:49413] PHP Stack trace:
+[Wed Jul 29 22:08:36.844411 2015] [:error] [pid 12037] [client 127.0.0.1:49413] PHP   1. {main}() /var/www/Agency-website/public/admin/index.php:0
+[Wed Jul 29 22:08:36.844483 2015] [:error] [pid 12037] [client 127.0.0.1:49413] PHP Fatal error:  require(): Failed opening required '/var/www/Agency-website/public/admin/../config/services.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/Agency-website/public/admin/index.php on line 13
+[Wed Jul 29 22:08:36.844498 2015] [:error] [pid 12037] [client 127.0.0.1:49413] PHP Stack trace:
+[Wed Jul 29 22:08:36.844509 2015] [:error] [pid 12037] [client 127.0.0.1:49413] PHP   1. {main}() /var/www/Agency-website/public/admin/index.php:0
+[Wed Jul 29 22:09:10.040120 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP Warning:  require(/var/www/Agency-website/public/admin/../config/services.php): failed to open stream: No such file or directory in /var/www/Agency-website/public/admin/index.php on line 13
+[Wed Jul 29 22:09:10.040183 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP Stack trace:
+[Wed Jul 29 22:09:10.040202 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP   1. {main}() /var/www/Agency-website/public/admin/index.php:0
+[Wed Jul 29 22:09:10.040276 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP Fatal error:  require(): Failed opening required '/var/www/Agency-website/public/admin/../config/services.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/Agency-website/public/admin/index.php on line 13
+[Wed Jul 29 22:09:10.040307 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP Stack trace:
+[Wed Jul 29 22:09:10.040320 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP   1. {main}() /var/www/Agency-website/public/admin/index.php:0
+[Wed Jul 29 22:09:10.532007 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP Warning:  require(/var/www/Agency-website/public/admin/../config/services.php): failed to open stream: No such file or directory in /var/www/Agency-website/public/admin/index.php on line 13
+[Wed Jul 29 22:09:10.532064 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP Stack trace:
+[Wed Jul 29 22:09:10.532081 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP   1. {main}() /var/www/Agency-website/public/admin/index.php:0
+[Wed Jul 29 22:09:10.532147 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP Fatal error:  require(): Failed opening required '/var/www/Agency-website/public/admin/../config/services.php' (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/Agency-website/public/admin/index.php on line 13
+[Wed Jul 29 22:09:10.532159 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP Stack trace:
+[Wed Jul 29 22:09:10.532172 2015] [:error] [pid 12075] [client 127.0.0.1:49422] PHP   1. {main}() /var/www/Agency-website/public/admin/index.php:0

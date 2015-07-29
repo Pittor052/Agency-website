@@ -9,7 +9,7 @@
 namespace Bolar\Admin\Controllers;
 
 
-use Bolar\Frontend\Controllers\ControllerBase;
+use Bolar\Admin\Controllers\ControllerBase;
 use Bolar\Frontend\Models\Gallery;
 
 class IndexController extends ControllerBase

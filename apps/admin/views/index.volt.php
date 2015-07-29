@@ -37,6 +37,6 @@
     <![endif]-->
   </head>
   <body class="skin-blue sidebar-mini">
-  {{ content() }}
+  <?php echo $this->getContent(); ?>
   </body>
 </html>
