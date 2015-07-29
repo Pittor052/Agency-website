@@ -1,2 +1,6 @@
-/cache/
+/apps/frontend/cache/
+/apps/frontend/config/
+
+/apps/admin/config/
+
 
