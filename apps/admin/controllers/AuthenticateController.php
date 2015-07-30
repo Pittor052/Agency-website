@@ -23,14 +23,19 @@ class AuthenticateController extends ControllerBase
             $user = Users::findFirst("email = '$email'");
 
             if ($user == true) {
-                if ($this->security->checkHash($this->request->getPost('password'), $user->getPassword())) {
-                    $this->session->set('auth', $user);
-
-                }
-//                $this->flash->success("HELLO, ADMIN!");
-//                var_dump($this);exit;
+                $this->passwordHashCheck($user);
                 $this->response->redirect('admin');
             }
+        }
+    }
+
+    /**
+     * @param $user
+     */
+    protected function passwordHashCheck($user)
+    {
+        if ($this->security->checkHash($this->request->getPost('password'), $user->getPassword())) {
+            $this->session->set('auth', $user);
         }
     }
 }
