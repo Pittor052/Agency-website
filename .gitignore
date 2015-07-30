@@ -1,6 +1,5 @@
 .idea
-apps/admin/config/
-apps/frontend/config/
+.htrouter.php
 access.log
 error.log
 index.html
