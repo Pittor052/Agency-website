@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lazaroff
- * Date: 15-7-29
- * Time: 16:53
- */
 
 namespace Bolar\Frontend\Controllers;
 
@@ -17,10 +11,6 @@ class ProductsController extends ControllerBase
     public function indexAction()
     {
         $product_model = Products::find();
-//        foreach ($product_model as $product) {
-//            var_dump($product->getGallery());
-//            exit;
-//        }
         $this->view->setVar('products', $product_model);
     }
 

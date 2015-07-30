@@ -75,6 +75,4 @@ class IndexController extends ControllerBase
         echo json_encode(array('status' => 'not found'));
         exit;
     }
-
-
 }

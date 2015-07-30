@@ -26,12 +26,7 @@ $di['router'] = function () {
     $router->removeExtraSlashes(true);
     $router->setDefaultNamespace("Bolar\Frontend\Controllers");
 
-    $router->add('/admin', array(
-        'namespace' => 'Bolar\Admin\Controllers',
-        'module' => 'admin',
-        'controller' => 'index',
-        'action' => 'index'
-    ))->setName('admin-enter');
+    require_once 'routes.php';
 
     return $router;
 };
