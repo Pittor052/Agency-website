@@ -1,6 +1,3 @@
-/apps/frontend/cache/
-/apps/frontend/config/
-
-/apps/admin/config/
-
+apps/admin/config/config.php
+apps/frontend/config/config.php
 
