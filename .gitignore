@@ -1,5 +1,7 @@
 .idea
 apps/admin/config/config.php
 apps/frontend/config/config.php
-
+access.log
+error.log
+index.html
 
