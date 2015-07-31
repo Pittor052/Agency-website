@@ -22,6 +22,7 @@ class Module implements ModuleDefinitionInterface
         $loader->registerNamespaces(array(
             'Bolar\Admin\Controllers' => __DIR__ . '/controllers/',
             'Bolar\Admin\Models' => __DIR__ . '/models/',
+            'Bolar\Frontend\Models' => __DIR__ . '/../frontend/models/',
         ));
 
         $loader->register();

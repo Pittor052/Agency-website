@@ -14,28 +14,6 @@ use Phalcon\Mvc\Url;
 
 class GalleryController
 {
-    public function uploadAction()
-    {
-        if ($this->request->hasFiles() == true) {
-            foreach ($this->request->getUploadedFiles() as $file) {
-                $file->moveTo('/var/www/Agency-website/public/img/' . $file->getName());
-                $galleryFileName = '/var/www/Agency-website/public/img/' . $file->getName();
-            }
-
-            //Insert record at gallery model from post rq
-            $this->request->getPost();
-            $galleryModel = new Gallery();
-            $galleryModel->setName($galleryFileName)
-                ->setCatId($this->request->getPost()['category']);
-            if (!$galleryModel->save()) {
-                //flashErrors
-                $this->flash->error("No category selected!");
-            } else {
-                //flashErrors
-                $this->flash->success("DONE!");
-            }
-        }
-    }
 
     public function galleryAction($catId = null, $picId = null)
     {

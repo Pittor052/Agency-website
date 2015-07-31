@@ -36,7 +36,7 @@ $di['router'] = function () {
  */
 $di['url'] = function () {
     $url = new UrlResolver();
-    $url->setBaseUri('/mvc/multiple-volt/');
+    $url->setBaseUri('');
     return $url;
 };
 

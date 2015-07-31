@@ -3,7 +3,7 @@
 use Phalcon\Mvc\Application;
 
 ini_set('display_errors', 'On');
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 
 try {
 
@@ -20,7 +20,7 @@ try {
 	/**
 	 * Assign the DI
 	 */
-	$application->setDI($di);
+	$application->setDi($di);
 
 	/**
 	 * Include modules

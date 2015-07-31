@@ -11,5 +11,19 @@ $router->add('/admin/create/product', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
     'controller' => 'index',
-    'action' => 'create-product'
+    'action' => 'createProduct'
 ))->setName('admin-create-product');
+
+$router->add('/admin/upload', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'index',
+    'action' => 'upload'
+))->setName('admin-upload');
+
+$router->add('/admin/gallery', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'index',
+    'action' => 'gallery'
+))->setName('admin-gallery');

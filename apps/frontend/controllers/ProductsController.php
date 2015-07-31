@@ -10,11 +10,10 @@ class ProductsController extends ControllerBase
 {
     public function indexAction()
     {
-
         $product_model = Products::find();
         $this->view->setVar('products', $product_model);
-        $this->view->setVar('products', $product_model);
     }
+
     public function listsAction()
     {
         if ($this->request->isGet()) {
@@ -24,6 +23,8 @@ class ProductsController extends ControllerBase
         echo json_encode(array('status' => '404 bad request'));
         exit;
     }
+
+
 
 
 }
