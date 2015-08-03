@@ -10,6 +10,7 @@ namespace Bolar\Admin\Controllers;
 
 
 use Bolar\Admin\Controllers\ControllerBase;
+use Bolar\Frontend\Models\Contact;
 use Bolar\Frontend\Models\Gallery;
 use Bolar\Frontend\Models\Products;
 
@@ -17,13 +18,20 @@ class IndexController extends ControllerBase
 {
     public function indexAction()
     {
-        $galleryModel = Gallery::find();
+        $id = null;
+        $galleryModel = Gallery::find(array_change_key_case("id ='$id'"));
         $this->view->setVar('gallery', $galleryModel);
+
+        $contactModel = Contact::findFirst();
+//        $this->view->setVar('contact', $contactModel);
+        $this->view->title           = $contactModel->title;
+//        $this->view->setVar("email",$contactModel ->getEmail());
+//        $this->view->setVar("topic", $contactModel -> getTopic());
+//        $this->view->setVar("msg", $contactModel -> getMsg());
     }
 
     public function createProductAction()
     {
-
         $this->view->disable();
         if ($this->request->hasFiles(true) == false) {
             $this->getDi()->getFlashSession()->error('Please select an image');

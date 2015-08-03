@@ -36,6 +36,48 @@
                 {{ partial("layouts/components/importProduct") }}
                 {{ partial("layouts/components/importToGallery") }}
                 {{ partial("layouts/components/displayGallery") }}
+                {{ partial("layouts/login") }}
+                <!--<div class="box-body no-padding">-->
+                    <!--<div class="mailbox-read-info">-->
+                        <!--<h3>Message Subject Is Placed Here</h3>-->
+                        <!--<h5>From: support@almsaeedstudio.com <span class="mailbox-read-time pull-right">15 Feb. 2015 11:03 PM</span>-->
+                        <!--</h5>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /.mailbox-read-info &ndash;&gt;-->
+                    <!--<div class="mailbox-controls with-border text-center">-->
+                        <!--<div class="btn-group">-->
+                            <!--<button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><i-->
+                                    <!--class="fa fa-trash-o"></i></button>-->
+                            <!--<button class="btn btn-default btn-sm" data-toggle="tooltip" title="Reply"><i-->
+                                    <!--class="fa fa-reply"></i></button>-->
+                            <!--<button class="btn btn-default btn-sm" data-toggle="tooltip" title="Forward"><i-->
+                                    <!--class="fa fa-share"></i></button>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; /.btn-group &ndash;&gt;-->
+                        <!--<button class="btn btn-default btn-sm" data-toggle="tooltip" title="Print"><i-->
+                                <!--class="fa fa-print"></i></button>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /.mailbox-controls &ndash;&gt;-->
+                    <!--<div class="mailbox-read-message">-->
+                        <!--{% for contact in contact %}-->
+
+
+                        <!--<p>    {{ contactModel['contact'] }} </p>-->
+
+                        <!--{%endfor%}-->
+                        <!--<p>Hello John,</p>-->
+
+                        <!--<p>Keffiyeh blog actually fashion axe vegan, irony biodiesel.</p>-->
+
+                        <!--<p>Cold-pressed hoodie chillwave put a bird on it aesthetic, bitters brunch meggings vegan-->
+                            <!--iPhone. </p>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /.mailbox-read-message &ndash;&gt;-->
+                <!--</div>-->
+                <!-- /.box-body -->
+
+                <!--end show -->
+
             </div>
             <!-- ./col -->
             <div class="col-lg-3 col-xs-6">
@@ -126,7 +168,8 @@
                     <div class="box-body chat" id="chat-box">
                         <!-- chat item -->
                         <div class="item">
-                            <img src="/public/templates/admin/dist/img/user4-128x128.jpg" alt="user image" class="online"/>
+                            <img src="/public/templates/admin/dist/img/user4-128x128.jpg" alt="user image"
+                                 class="online"/>
 
                             <p class="message">
                                 <a href="#" class="name">
@@ -153,7 +196,8 @@
                         <!-- /.item -->
                         <!-- chat item -->
                         <div class="item">
-                            <img src="/public/templates/admin/dist/img/user3-128x128.jpg" alt="user image" class="offline"/>
+                            <img src="/public/templates/admin/dist/img/user3-128x128.jpg" alt="user image"
+                                 class="offline"/>
 
                             <p class="message">
                                 <a href="#" class="name">
@@ -168,7 +212,8 @@
                         <!-- /.item -->
                         <!-- chat item -->
                         <div class="item">
-                            <img src="/public/templates/admin/dist/img/user2-160x160.jpg" alt="user image" class="offline"/>
+                            <img src="/public/templates/admin/dist/img/user2-160x160.jpg" alt="user image"
+                                 class="offline"/>
 
                             <p class="message">
                                 <a href="#" class="name">

@@ -27,3 +27,10 @@ $router->add('/admin/gallery', array(
     'controller' => 'index',
     'action' => 'gallery'
 ))->setName('admin-gallery');
+
+$router->add('/authenticate', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'authenticate',
+    'action' => 'index'
+))->setName('admin-authenticate');
