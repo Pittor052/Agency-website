@@ -28,6 +28,13 @@ $router->add('/admin/gallery', array(
     'action' => 'gallery'
 ))->setName('admin-gallery');
 
+$router->add('/admin/contacts', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'index',
+    'action' => 'listContacts'
+))->setName('admin-contacts');
+
 $router->add('/authenticate', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
