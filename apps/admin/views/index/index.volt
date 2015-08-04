@@ -11,7 +11,18 @@
             <li class="active">Dashboard</li>
         </ol>
     </section>
-
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                {{partial("layouts/components/errMsg")}}
+                {{ partial("layouts/components/importProduct") }}
+                {{ partial("layouts/components/importToGallery") }}
+                {{ partial("layouts/components/displayGallery") }}
+                {{ partial("layouts/login") }}
+            </div>
+        </div>
+    </section>
     <!-- Main content -->
     <section class="content">
         <!-- Small boxes (Stat box) -->
@@ -29,68 +40,9 @@
                     </div>
                     <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
-
-        <!--Edn form for products-->
-        {{partial("layouts/components/errMsg")}}
-        {{ partial("layouts/components/importProduct") }}
-        {{ partial("layouts/components/importToGallery") }}
-        {{ partial("layouts/components/displayGallery") }}
-        {{ partial("layouts/login") }}
             </div>
         </div>
-        <!--NEW VIEW FOR MSG's-->
-        <div class="col-md-9">
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Read Mail</h3>
 
-                    <div class="box-tools pull-right">
-                        <a href="#" class="btn btn-box-tool" data-toggle="tooltip" title="Previous"><i
-                                class="fa fa-chevron-left"></i></a>
-                        <a href="#" class="btn btn-box-tool" data-toggle="tooltip" title="Next"><i
-                                class="fa fa-chevron-right"></i></a>
-                    </div>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body no-padding">
-                    <div class="mailbox-read-info">
-                        {% for obj in contactList %}
-
-                        <h4>*Topic : {{ obj.getTopic() }}</h4>
-                        <h5>From:{{ obj.getEmail() }} <span
-                                class="mailbox-read-time pull-right">15 Feb. 2015 11:03 PM</span>
-                        </h5>
-
-                        <h3>*Name : {{ obj.getName() }}</h3>
-                    </div>
-                    <!-- /.mailbox-read-info -->
-                    <div class="mailbox-controls with-border text-center">
-                        <div class="btn-group">
-                            <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><i
-                                    class="fa fa-trash-o"></i></button>
-                            <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Reply"><i
-                                    class="fa fa-reply"></i></button>
-                            <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Forward"><i
-                                    class="fa fa-share"></i></button>
-                        </div>
-                        <!-- /.btn-group -->
-                        <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Print"><i
-                                class="fa fa-print"></i></button>
-                    </div>
-                    <!-- /.mailbox-controls -->
-                    <div class="mailbox-read-message">
-                        <h4>*message : {{ obj.getMsg() }}</h4>
-                        {%endfor%}
-                    </div>
-                    <!-- /.mailbox-read-message -->
-                </div>
-                <!-- /.box-body -->
-            </div>
-        </div>
-        <!-- /. box -->
-
-        <!-- /.col -->
-        <!--END NEW VIEW FOR MSG's-->
 
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
@@ -139,7 +91,60 @@
         </div>
 
         <!-- ./col -->
+
     </section>
+    <!--NEW VIEW FOR MSG's-->
+    <div class="content-wrapper">
+        <div class="col-md-9">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Read Mail</h3>
+
+                    <div class="box-tools pull-right">
+                        <a href="#" class="btn btn-box-tool" data-toggle="tooltip" title="Previous"><i
+                                class="fa fa-chevron-left"></i></a>
+                        <a href="#" class="btn btn-box-tool" data-toggle="tooltip" title="Next"><i
+                                class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <div class="mailbox-read-info">
+                        {% for obj in contactList %}
+
+                        <h4>*Topic : {{ obj.getTopic() }}</h4>
+                        <h5>From:{{ obj.getEmail() }} <span
+                                class="mailbox-read-time pull-right">15 Feb. 2015 11:03 PM</span>
+                        </h5>
+
+                        <h3>*Name : {{ obj.getName() }}</h3>
+                    </div>
+                    <!-- /.mailbox-read-info -->
+                    <div class="mailbox-controls with-border text-center">
+                        <div class="btn-group">
+                            <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><i
+                                    class="fa fa-trash-o"></i></button>
+                            <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Reply"><i
+                                    class="fa fa-reply"></i></button>
+                            <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Forward"><i
+                                    class="fa fa-share"></i></button>
+                        </div>
+                        <!-- /.btn-group -->
+                        <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Print"><i
+                                class="fa fa-print"></i></button>
+                    </div>
+                    <!-- /.mailbox-controls -->
+                    <div class="mailbox-read-message">
+                        <h4>*message : {{ obj.getMsg() }}</h4>
+                        {%endfor%}
+                    </div>
+                    <!-- /.mailbox-read-message -->
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+    <!--END NEW VIEW FOR MSG's-->`
     <!-- /.row -->
     <!-- Main row -->
     <div class="row">
