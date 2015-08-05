@@ -19,7 +19,7 @@ $di = new FactoryDefault();
  */
 $di['router'] = function () {
 
-    $router = new Router();
+    $router = new Router(false);
 
     $router->setDefaultModule("frontend");
     $router->setUriSource(\Phalcon\Mvc\Router::URI_SOURCE_SERVER_REQUEST_URI);

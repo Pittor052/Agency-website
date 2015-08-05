@@ -24,7 +24,6 @@ class IndexController extends ControllerBase
 //        var_dump($contactModel);exit;
         $this->view->setVar('gallery', $galleryModel);
         $this->view->setVar('contactList', $contactModel);
-
     }
 
 
