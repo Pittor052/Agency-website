@@ -90,3 +90,34 @@ $router->addPost('/admin/contnet-manager/delete/:int', array(
     'action' => 'delete',
     'id' => 1
 ))->setName('admin-content-manager-create');
+
+
+//Frontend
+
+$router->addGet('/services', array(
+    'namespace' => 'Bolar\Frontend\Controllers',
+    'module' => 'frontend',
+    'controller' => 'services',
+    'action' => 'index',
+))->setName('frontend-services');
+
+$router->addGet('/about', array(
+    'namespace' => 'Bolar\Frontend\Controllers',
+    'module' => 'frontend',
+    'controller' => 'about',
+    'action' => 'index',
+))->setName('frontend-about');
+
+$router->addGet('/products', array(
+    'namespace' => 'Bolar\Frontend\Controllers',
+    'module' => 'frontend',
+    'controller' => 'products',
+    'action' => 'index',
+))->setName('frontend-products');
+
+$router->addGet('/contact', array(
+    'namespace' => 'Bolar\Frontend\Controllers',
+    'module' => 'frontend',
+    'controller' => 'contact',
+    'action' => 'index',
+))->setName('frontend-contact');
