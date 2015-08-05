@@ -68,9 +68,25 @@ $router->add('/authenticate', array(
 
 
 //ContentManagerController
-$router->addPost('/admin/contnet-manager/home', array(
+$router->addPost('/admin/contnet-manager/create', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
     'controller' => 'content-manager',
-    'action' => 'createHome'
-))->setName('admin-content-manager');
+    'action' => 'create'
+))->setName('admin-content-manager-create');
+
+$router->addPost('/admin/contnet-manager/edit/:int', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'content-manager',
+    'action' => 'edit',
+    'id' => 1
+))->setName('admin-content-manager-create');
+
+$router->addPost('/admin/contnet-manager/delete/:int', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'content-manager',
+    'action' => 'delete',
+    'id' => 1
+))->setName('admin-content-manager-create');

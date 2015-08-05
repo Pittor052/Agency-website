@@ -18,11 +18,11 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body pad">
-                    <form>
+
                     <textarea id="editor1" name="content" rows="10" cols="80">
 
                     </textarea>
-                    </form>
+
                 </div>
             </div>
         </div>

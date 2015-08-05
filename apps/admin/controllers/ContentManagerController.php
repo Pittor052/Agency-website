@@ -20,7 +20,7 @@ use Phalcon\Mvc\Model;
 class ContentManagerController extends ControllerBase
 {
     //Home page
-    public function createHomeAction()
+    public function createAction()
     {
         $this->view->disable();
         if ($this->request->isPost()) {
@@ -33,46 +33,26 @@ class ContentManagerController extends ControllerBase
         }
     }
 
-    public function editHomeAction($id)
+    public function editAction($id)
     {
-
+        $this->view->disable();
+        if ($this->request->isPost()) {
+            $contentManagerModel = ContentManager::findFirst("id = '$id'");
+            if (empty($contentManagerModel->save($this->request->getPost()))) {
+                $contentManagerModel->setErr();
+                return $this->responseHandling();
+            }
+            return $this->responseHandling('Success');
+        }
     }
 
-    public function deleteHomeAction($id)
+    public function deleteAction($id)
     {
-
-    }
-
-    //Service page
-    public function createServiceAction()
-    {
-
-    }
-
-    public function editServiceAction($id)
-    {
-
-    }
-
-    public function deleteServiceAction($id)
-    {
-
-    }
-
-    //About page
-
-    public function createAboutAction()
-    {
-
-    }
-
-    public function editAboutAction($id)
-    {
-
-    }
-
-    public function deleteAboutAction($id)
-    {
-
+        $this->view->disable();
+        if ($this->request->isPost()) {
+            $contentManagerModel = ContentManager::findFirst("id = '$id'");
+            $contentManagerModel->delete();
+            return $this->responseHandling('Success');
+        }
     }
 }
