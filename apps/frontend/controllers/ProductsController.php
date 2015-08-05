@@ -25,6 +25,4 @@ class ProductsController extends ControllerBase
     }
 
 
-
-
 }

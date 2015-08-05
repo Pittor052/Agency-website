@@ -15,12 +15,15 @@
         <!-- Small boxes (Stat box) -->
         <div class="row">
             <div class="col-lg-3 col-xs-6">
-                {{partial("layouts/components/errMsg")}}
+                {{ partial("layouts/components/errMsg") }}
                 {{ partial("layouts/components/importProduct") }}
                 {{ partial("layouts/components/importToGallery") }}
                 {{ partial("layouts/components/displayGallery") }}
-                {{ partial("layouts/login") }}
+                {{ partial("layouts/components/login") }}
             </div>
+        </div>
+        <div class="col-sm-7">
+            {{ partial("layouts/forms/contentManagerForm") }}
         </div>
     </section>
     <!-- Main content -->
@@ -94,7 +97,7 @@
 
     </section>
     <!--NEW VIEW FOR MSG's-->
-    {{partial("layouts/components/displayContactMsgs")}}
+    {{ partial("layouts/components/displayContactMsgs") }}
     <!--END NEW VIEW FOR MSG's-->`
     <!-- /.row -->
     <!-- Main row -->
@@ -129,9 +132,9 @@
                     <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
                         <div class="btn-group" data-toggle="btn-toggle">
                             <button type="button" class="btn btn-default btn-sm active"><i
-                                    class="fa fa-square text-green"></i></button>
+                                        class="fa fa-square text-green"></i></button>
                             <button type="button" class="btn btn-default btn-sm"><i
-                                    class="fa fa-square text-red"></i></button>
+                                        class="fa fa-square text-red"></i></button>
                         </div>
                     </div>
                 </div>
@@ -351,7 +354,7 @@
                 </div>
                 <div class="box-footer clearfix">
                     <button class="pull-right btn btn-default" id="sendEmail">Send <i
-                            class="fa fa-arrow-circle-right"></i></button>
+                                class="fa fa-arrow-circle-right"></i></button>
                 </div>
             </div>
 
@@ -369,7 +372,7 @@
                                 title="Date range"><i class="fa fa-calendar"></i></button>
                         <button class="btn btn-primary btn-sm pull-right" data-widget="collapse"
                                 data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i
-                                class="fa fa-minus"></i></button>
+                                    class="fa fa-minus"></i></button>
                     </div>
                     <!-- /. tools -->
 
@@ -464,7 +467,7 @@
                         <!-- button with a dropdown -->
                         <div class="btn-group">
                             <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"><i
-                                    class="fa fa-bars"></i></button>
+                                        class="fa fa-bars"></i></button>
                             <ul class="dropdown-menu pull-right" role="menu">
                                 <li><a href="#">Add new event</a></li>
                                 <li><a href="#">Clear events</a></li>

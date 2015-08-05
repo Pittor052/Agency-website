@@ -24,49 +24,34 @@ class DeleteController extends ControllerBase
         if (!$contacts) {
             return $this->flashSession->error('Something went wrong, please try again!');
         }
-        if (!$contacts->delete()) {
-            //TODO do log
-            // $contacts->setErr();
-            // return $this->response->redirect('/admin');
-        }
+
         $this->flashSession->success('Contact message is deleted !');
         return $this->response->redirect('/admin');
     }
 
     public function deleteProductAction($id)
     {
-        $id = Products::find($id);
-        //      TODO to do sort delete  gallery and products
-        if ($id != null) {
-            Products::findFirst($id)->delete();
-
-        }
-        if ($id->delete()) {
-            $this->flashSession->success('Product is deleted !');
-        } else {
+        $product = Products::findFirst("id = '$id'");
+        if (empty($id) || empty($product)) {
             $this->flashSession->error('Something went wrong, please try again!');
+            return $this->response->redirect('/admin');
         }
+
+        $product->delete();
+        $this->flashSession->success('Product is deleted !');
         return $this->response->redirect('/admin');
     }
 
-    public function deleteGalleryAction($id, $productId)
+    public function deleteGalleryAction($id)
     {
-
-        $id = Gallery::find($id);
-        $productId = Gallery::find($productId);
-
-
-//      TODO to do sort delete  gallery and products
-        if ($id != null) {
-            Gallery::findFirst($id)->delete();
-
-        }
-
-        if ($id->delete()) {
-            $this->flashSession->success('Gallery picture is deleted !');
-        } else {
+        $galleryModel = Gallery::findFirst("id = '$id'");
+        if (empty($galleryModel) || empty($id)) {
             $this->flashSession->error('Something went wrong, please try again!');
+            return $this->response->redirect('/admin');
         }
+
+        $galleryModel->delete();
+        $this->flashSession->success('Gallery picture is deleted !');
         return $this->response->redirect('/admin');
     }
 
