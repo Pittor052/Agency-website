@@ -7,25 +7,28 @@
         </div>
 
 
-        {%if products%}
-        <?php foreach($products as $product){ ?>
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        {% if products %}
+        {% for product in products %}
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <span class="">
                 <?php echo $product->getName(); ?>
             </span>
-            <a class="thumbnail" href="#">
-
-                <img class="img-responsive" width="200" height="200" src="<?php echo $product->getGallery()->getName()?>" alt="">
-            </a>
+                <a class="thumbnail" href="#">
+                    {% if product.getGallery() %}
+                        <img class="img-responsive" width="200" height="200"
+                             src="<?php echo $product->getGallery()->getName()?>" alt="">
+                    {% else %}
+                        <img class="img-responsive" width="200" height="200"
+                             src="/img/system/default_product.jpg" alt="">
+                    {% endif %}
+                </a>
             <span>
                 <?php echo substr($product->getDescription(),0, 40); ?>
             </span>
-        </div>
-        <br/>
-        <br/>
-        <?php } ?>
-        {%endIf%}
-
-
+            </div>
+            <br/>
+            <br/>
+        {% endfor %}
+        {% endIf %}
     </div>
 </div>
