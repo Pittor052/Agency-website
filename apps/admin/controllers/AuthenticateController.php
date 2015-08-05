@@ -36,7 +36,7 @@ class AuthenticateController extends ControllerBase
     {
         if ($this->security->checkHash($this->request->getPost('password'), $user->getPassword())) {
             $this->session->set('auth', $user);
-//            $this->flashSession->success('Hello, Admin !');
+            $this->flashSession->success('Hello, Admin !');
         }
         else
         {

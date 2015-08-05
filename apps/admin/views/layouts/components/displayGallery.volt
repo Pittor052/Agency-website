@@ -5,7 +5,8 @@
         <div class="box box-solid">
             <div class="box-header with-border">
                 <h3 class="box-title">Carousel</h3>
-            </div><!-- /.box-header -->
+            </div>
+            <!-- /.box-header -->
             <div class="box-body">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -15,6 +16,7 @@
                     </ol>
                     <div class="carousel-inner">
                         {% for key,img in gallery%}
+
                         {%if key==0%}
                         <div class="item active">
                             <img src="{{img.name}}" alt="">
@@ -25,24 +27,6 @@
                         </div>
                         {%endif%}
                         {%endfor%}
-                        <!--<div class="item active">-->
-                            <!--<img src="/img/products/3/aq213oR_700b_v1.jpg" alt="First slide">-->
-                            <!--<div class="carousel-caption">-->
-                                <!--First Slide-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<img src="http://placehold.it/900x500/3c8dbc/ffffff&text=I+Love+Bootstrap" alt="Second slide">-->
-                            <!--<div class="carousel-caption">-->
-                                <!--Second Slide-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<img src="http://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap" alt="Third slide">-->
-                            <!--<div class="carousel-caption">-->
-                                <!--Third Slide-->
-                            <!--</div>-->
-                        <!--</div>-->
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                         <span class="fa fa-angle-left"></span>
@@ -51,8 +35,18 @@
                         <span class="fa fa-angle-right"></span>
                     </a>
                 </div>
-            </div><!-- /.box-body -->
-        </div><!-- /.box -->
-    </div><!-- /.col -->
+            </div>
+            <div class="btn-group">
+                <a href="/admin/delete/gallery/{{ img.id }}">
+                    <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete" value="id"  method="POST">
+                        <i class="fa fa-trash-o"></i></button>
+                </a>
+            </div>
+
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- /.col -->
 </div><!-- /.row -->
 <!-- END ACCORDION & CAROUSEL-->

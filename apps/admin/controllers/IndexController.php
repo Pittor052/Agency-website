@@ -21,23 +21,12 @@ class IndexController extends ControllerBase
         $id = null;
         $contactModel = Contact::find();
         $galleryModel = Gallery::find(array_change_key_case("id ='$id'"));
-
+//        var_dump($contactModel);exit;
         $this->view->setVar('gallery', $galleryModel);
         $this->view->setVar('contactList', $contactModel);
 
     }
 
-    public function listContactsAction()
-    {
-
-
-//        var_dump($contactModel);exit;
-//        echo  $contactModel->name;
-//        var_dump($this);exit;
-//        $this->view->setVar("email",$contactModel ->getEmail());
-//        $this->view->setVar("topic", $contactModel -> getTopic());
-//        $this->view->setVar("msg", $contactModel -> getMsg());
-    }
 
     public function createProductAction()
     {
@@ -69,7 +58,7 @@ class IndexController extends ControllerBase
     {
         $this->view->disable();
         if ($this->request->hasFiles(true) == false) {
-            $this->getDi()->getFlashSession()->error("Please select image, category and try again!");
+            $this->getDi()->getFlashSession()->error("Please select image and category and try again!");
             $this->view->setVar('flash', $this->flash);
             return $this->response->redirect('/admin');
         }

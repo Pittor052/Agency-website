@@ -165,6 +165,7 @@ class Contact extends BaseModel
      *
      * @return boolean
      */
+
     public function validation()
     {
         $this->validate(new Email(array(
