@@ -11,7 +11,7 @@
             {% endif %}
         </div>
         <div class="contact-form-wrapper">
-            <form class="form-horizontal" role="form" method="POST" action="contact">
+            <form class="form-horizontal" role="form" method="post" action="/contact">
                 <div class="form-group">
                     <label for="Name" class="col-sm-3 control-label"><b>Your name</b></label>
 

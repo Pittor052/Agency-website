@@ -9,12 +9,14 @@
 namespace Bolar\Frontend\Controllers;
 
 
+use Bolar\Frontend\Models\ContentManager;
+
 class ServicesController extends ControllerBase
 {
 
     public function indexAction()
     {
-
-
+        $contentManager = ContentManager::find();
+        $this->view->setVar('contentList', $contentManager);
     }
 }

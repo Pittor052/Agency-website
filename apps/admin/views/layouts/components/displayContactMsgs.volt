@@ -16,7 +16,6 @@
             <div class="box-body no-padding">
                 <div class="mailbox-read-info" >
                     {% for obj in contactList %}
-                    {{ obj.getId}}
                     <h4>*Topic:  {{ obj.getTopic() }}</h4>
                     <h5>From:  {{ obj.getEmail() }} <span
                             class="mailbox-read-time pull-right">15 Feb. 2015 11:03 PM</span>

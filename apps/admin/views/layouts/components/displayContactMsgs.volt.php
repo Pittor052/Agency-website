@@ -16,7 +16,6 @@
             <div class="box-body no-padding">
                 <div class="mailbox-read-info" >
                     <?php foreach ($contactList as $obj) { ?>
-                    <?php echo $obj->getId; ?>
                     <h4>*Topic:  <?php echo $obj->getTopic(); ?></h4>
                     <h5>From:  <?php echo $obj->getEmail(); ?> <span
                             class="mailbox-read-time pull-right">15 Feb. 2015 11:03 PM</span>

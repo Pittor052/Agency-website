@@ -2,6 +2,7 @@
 
 namespace Bolar\Frontend\Controllers;
 
+use Bolar\Frontend\Models\ContentManager;
 use Bolar\Frontend\Models\Users;
 
 class IndexController extends ControllerBase
@@ -9,6 +10,8 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
+        $contentManager = ContentManager::find();
+        $this->view->setVar('contentList', $contentManager);
     }
 
     public function signUpAction()

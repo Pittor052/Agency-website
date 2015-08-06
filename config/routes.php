@@ -115,7 +115,7 @@ $router->addGet('/products', array(
     'action' => 'index',
 ))->setName('frontend-products');
 
-$router->addGet('/contact', array(
+$router->add('/contact', array(
     'namespace' => 'Bolar\Frontend\Controllers',
     'module' => 'frontend',
     'controller' => 'contact',
