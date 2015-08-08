@@ -15,17 +15,19 @@
                         <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
                     </ol>
                     <div class="carousel-inner">
-                        <?php foreach ($gallery as $key => $img) { ?>
-
-                        <?php if ($key == 0) { ?>
-                        <div class="item active">
-                            <img src="<?php echo $img->name; ?>" alt="">
-                        </div>
-                        <?php } else { ?>
-                        <div class="item">
-                            <img src="<?php echo $img->name; ?>" alt="">
-                        </div>
+                        <?php foreach ($gallery as $key => $obj) { ?>
+                        <?php if ($obj->getProducts()) { ?>
+                        <?php continue; ?>
                         <?php } ?>
+                        <?php if ($key == 1) { ?>
+                        <?php $className = "item active" ?>
+                        <?php } else { ?>
+                        <?php $className = "item" ?>
+                        <?php } ?>
+
+                        <div class="<?php echo $className; ?>">
+                            <img src="<?php echo $obj->name; ?>" alt="">
+                        </div>
                         <?php } ?>
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -37,8 +39,9 @@
                 </div>
             </div>
             <div class="btn-group">
-                <a href="/admin/delete/gallery/<?php echo $img->id; ?>">
-                    <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete" value="id"  method="POST">
+                <a href="/admin/delete/gallery/<?php echo $obj->id; ?>">
+                    <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete" value="id"
+                            method="POST">
                         <i class="fa fa-trash-o"></i></button>
                 </a>
             </div>

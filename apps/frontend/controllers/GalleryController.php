@@ -14,6 +14,10 @@ use Phalcon\Mvc\Url;
 
 class GalleryController
 {
+    public function indexAction()
+    {
+
+    }
 
     public function galleryAction($catId = null, $picId = null)
     {
@@ -41,13 +45,5 @@ class GalleryController
         exit;
     }
 
-    public function indexAction()
-    {
-//        $a = Gallery::find();
-//        $postModel = Post::find("issue = 0");
-//        $this->view->setVar('data', $postModel);
-//        $this->view->setVar('gallery', $a->toArray());
 
-
-    }
 }

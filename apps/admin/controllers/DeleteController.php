@@ -24,7 +24,9 @@ class DeleteController extends ControllerBase
         if (!$contacts) {
             return $this->flashSession->error('Something went wrong, please try again!');
         }
+        if (!$contacts->delete()) {
 
+        }
         $this->flashSession->success('Contact message is deleted !');
         return $this->response->redirect('/admin');
     }
@@ -53,10 +55,5 @@ class DeleteController extends ControllerBase
         $galleryModel->delete();
         $this->flashSession->success('Gallery picture is deleted !');
         return $this->response->redirect('/admin');
-    }
-
-    protected function sortGallery($id, $productId)
-    {
-
     }
 }

@@ -15,17 +15,19 @@
                         <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
                     </ol>
                     <div class="carousel-inner">
-                        {% for key,img in gallery%}
-
-                        {%if key==0%}
-                        <div class="item active">
-                            <img src="{{img.name}}" alt="">
-                        </div>
-                        {%else%}
-                        <div class="item">
-                            <img src="{{img.name}}" alt="">
-                        </div>
+                        {% for key, obj in gallery%}
+                        {% if obj.getProducts() %}
+                        {% continue %}
                         {%endif%}
+                        {% if key == 1%}
+                        <?php $className = "item active" ?>
+                        {%else%}
+                        <?php $className = "item" ?>
+                        {%endif%}
+
+                        <div class="{{className}}">
+                            <img src="{{obj.name}}" alt="">
+                        </div>
                         {%endfor%}
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -37,8 +39,9 @@
                 </div>
             </div>
             <div class="btn-group">
-                <a href="/admin/delete/gallery/{{ img.id }}">
-                    <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete" value="id"  method="POST">
+                <a href="/admin/delete/gallery/{{ obj.id }}">
+                    <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete" value="id"
+                            method="POST">
                         <i class="fa fa-trash-o"></i></button>
                 </a>
             </div>

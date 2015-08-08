@@ -13,7 +13,6 @@ use Phalcon\Mvc\Model\Validator\PresenceOf;
 
 class ContentManager extends BaseModel
 {
-
     protected $id;
     protected $page_type;
     protected $content;

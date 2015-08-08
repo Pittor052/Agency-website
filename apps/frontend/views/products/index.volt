@@ -13,7 +13,7 @@
             <span class="">
                 <?php echo $product->getName(); ?>
             </span>
-                <a class="thumbnail" href="#">
+                <a class="thumbnail" href="">
                     {% if product.getGallery() %}
                         <img class="img-responsive" width="200" height="200"
                              src="<?php echo $product->getGallery()->getName()?>" alt="">
@@ -24,6 +24,7 @@
                 </a>
             <span>
                 <?php echo substr($product->getDescription(),0, 40); ?>
+                <br><a href="http://store.dev/products/more/{{ product.id }}" method="GET">read more...</a>
             </span>
             </div>
             <br/>
