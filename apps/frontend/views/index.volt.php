@@ -15,16 +15,16 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/icomoon-social.css">
+    <link rel="stylesheet" href="/css/icomoon-social.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="css/leaflet.css"/>
+    <link rel="stylesheet" href="/css/leaflet.css"/>
     <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/leaflet.ie.css"/>
+    <link rel="stylesheet" href="/css/leaflet.ie.css"/>
     <![endif]-->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -38,29 +38,29 @@
 <div class="mainmenu-wrapper">
     <div class="container">
         <!--<div class="menuextras">-->
-            <!--<div class="extras">-->
-                <!--<ul>-->
-                    <!--<li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a-->
-                            <!--href="page-shopping-cart.html"><b>3 items</b></a></li>-->
-                    <!--<li>-->
-                        <!--<div class="dropdown choose-country">-->
-                            <!--<a class="#" data-toggle="dropdown" href="#"><img src="img/flags/gb.png"-->
-                                                                              <!--alt="Great Britain"> UK</a>-->
-                            <!--<ul class="dropdown-menu" role="menu">-->
-                                <!--<li role="menuitem"><a href="#"><img src="img/flags/us.png" alt="United States"> US</a>-->
-                                <!--</li>-->
-                                <!--<li role="menuitem"><a href="#"><img src="img/flags/de.png" alt="Germany"> DE</a></li>-->
-                                <!--<li role="menuitem"><a href="#"><img src="img/flags/es.png" alt="Spain"> ES</a></li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                    <!--<li><a href="page-login.html">Login</a></li>-->
-                <!--</ul>-->
-            <!--</div>-->
+        <!--<div class="extras">-->
+        <!--<ul>-->
+        <!--<li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a-->
+        <!--href="page-shopping-cart.html"><b>3 items</b></a></li>-->
+        <!--<li>-->
+        <!--<div class="dropdown choose-country">-->
+        <!--<a class="#" data-toggle="dropdown" href="#"><img src="img/flags/gb.png"-->
+        <!--alt="Great Britain"> UK</a>-->
+        <!--<ul class="dropdown-menu" role="menu">-->
+        <!--<li role="menuitem"><a href="#"><img src="img/flags/us.png" alt="United States"> US</a>-->
+        <!--</li>-->
+        <!--<li role="menuitem"><a href="#"><img src="img/flags/de.png" alt="Germany"> DE</a></li>-->
+        <!--<li role="menuitem"><a href="#"><img src="img/flags/es.png" alt="Spain"> ES</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li><a href="page-login.html">Login</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
         <!--</div>-->
         <nav id="mainmenu" class="mainmenu">
             <ul>
-                <li class="logo-wrapper"><a href="index.html"><img src="img/mPurpose-logo.png"
+                <li class="logo-wrapper"><a href="index.html"><img src="/img/mPurpose-logo.png"
                                                                    alt="Multipurpose Twitter Bootstrap Template"></a>
                 </li>
                 <li class="active">
@@ -185,13 +185,15 @@
                     <b>Phone:</b> +44 123 654321<br/>
                     <b>Fax:</b> +44 123 654321<br/>
                     <b>Email:</b> <a
-                        href="mailto:getintoutch@yourcompanydomain.com">getintoutch@yourcompanydomain.com</a>
+                            href="mailto:getintoutch@yourcompanydomain.com">getintoutch@yourcompanydomain.com</a>
                 </p>
             </div>
             <div class="col-footer col-md-2 col-xs-6">
                 <h3>Stay Connected</h3>
                 <ul class="footer-stay-connected no-list-style">
-                    <li><a href="https://www.facebook.com/pages/%D0%9F%D0%90-%D0%91%D0%BE%D0%BB%D0%B0%D1%80/1448085492170894?fref=ts" class="facebook"></a></li>
+                    <li>
+                        <a href="https://www.facebook.com/pages/%D0%9F%D0%90-%D0%91%D0%BE%D0%BB%D0%B0%D1%80/1448085492170894?fref=ts"
+                           class="facebook"></a></li>
                     <!--<li><a href="#" class="twitter"></a></li>-->
                     <!--<li><a href="#" class="googleplus"></a></li>-->
                 </ul>
@@ -208,13 +210,13 @@
 <!-- Javascripts -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
-<script src="js/jquery.fitvids.js"></script>
-<script src="js/jquery.sequence-min.js"></script>
-<script src="js/jquery.bxslider.js"></script>
-<script src="js/main-menu.js"></script>
-<script src="js/template.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script src="/js/jquery.sequence-min.js"></script>
+<script src="/js/jquery.bxslider.js"></script>
+<script src="/js/main-menu.js"></script>
+<script src="/js/template.js"></script>
 
 </body>
 </html>

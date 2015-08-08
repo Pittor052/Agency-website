@@ -93,13 +93,20 @@ $router->addPost('/admin/contnet-manager/delete/:int', array(
 
 
 //Frontend
-$router->addGet('/products/more/:int', array(
+$router->addGet('/products/:int', array(
     'namespace' => 'Bolar\Frontend\Controllers',
     'module' => 'frontend',
     'controller' => 'products',
-    'action' => 'productMore',
+    'action' => 'index',
     'id' => 1
-))->setName('frontend-products-more');
+))->setName('frontend-products');
+
+$router->addGet('/products', array(
+    'namespace' => 'Bolar\Frontend\Controllers',
+    'module' => 'frontend',
+    'controller' => 'products',
+    'action' => 'index',
+))->setName('frontend-products');
 
 $router->addGet('/services', array(
     'namespace' => 'Bolar\Frontend\Controllers',
@@ -114,13 +121,6 @@ $router->addGet('/about', array(
     'controller' => 'about',
     'action' => 'index',
 ))->setName('frontend-about');
-
-$router->addGet('/products', array(
-    'namespace' => 'Bolar\Frontend\Controllers',
-    'module' => 'frontend',
-    'controller' => 'products',
-    'action' => 'index',
-))->setName('frontend-products');
 
 $router->add('/contact', array(
     'namespace' => 'Bolar\Frontend\Controllers',
