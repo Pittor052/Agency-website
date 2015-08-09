@@ -25,12 +25,17 @@
 
             <?php } elseif ($products) { ?>
             <?php if ($products->getGallery()) { ?>
+            <br> <?php echo $products->getName(); ?>
+            <br><br>
             <img class="img-responsive" width="200" height="200"
                  src="<?php echo $products->getGallery()->getName(); ?>" alt="">
+
             <?php } else { ?>
+
             <img class="img-responsive" width="200" height="200"
                  src="/img/system/default_product.jpg" alt="">
             <?php } ?>
+            <br>
             <p> <h4>Описание:</h4> <?php echo $products->getDescription(); ?> </p>
             <p> <h4>В наличност:</h4> <?php echo $products->getAvailable(); ?> </p>
             <p> <h4>Цена:</h4> <?php echo $products->getPrice(); ?> </p>

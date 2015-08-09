@@ -25,12 +25,17 @@
 
             {% elseif products %}
             {% if products.getGallery() %}
+            <br> {{products.getName()}}
+            <br><br>
             <img class="img-responsive" width="200" height="200"
-                 src="{{ products.getGallery().getName() }}" alt="">
+                 src="{{ products.getGallery().getName()}}" alt="">
+
             {% else %}
+
             <img class="img-responsive" width="200" height="200"
                  src="/img/system/default_product.jpg" alt="">
             {% endif %}
+            <br>
             <p> <h4>Описание:</h4> {{ products.getDescription() }} </p>
             <p> <h4>В наличност:</h4> {{ products.getAvailable() }} </p>
             <p> <h4>Цена:</h4> {{ products.getPrice() }} </p>

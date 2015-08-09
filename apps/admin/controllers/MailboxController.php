@@ -14,9 +14,13 @@ use Bolar\Frontend\Models\Contact;
 
 class MailboxController extends ControllerBase
 {
-    public function indexAction()
+    public function indexAction($id=null)
     {
-        $contactModel = Contact::find();
+        if ($id) {
+            $contactModel = Contact::findFirst("id = '$id'");
+        } else {
+            $contactModel = Contact::find();
+        }
         $this->view->setVar('contactList', $contactModel);
     }
 }
