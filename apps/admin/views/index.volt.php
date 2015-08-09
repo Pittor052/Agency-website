@@ -365,6 +365,12 @@
                         <span>Gallery</span>
                     </a>
                 </li>
+                <li class="treeview">
+                    <a href="/admin/mailbox">
+                        <i class="fa fa-envelope-o"></i>
+                        <span>Mailbox</span>
+                    </a>
+                </li>
                 <li>
                     <a href="/templates/admin/pages/widgets.html">
                         <i class="fa fa-th"></i> <span>Widgets</span>

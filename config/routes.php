@@ -98,7 +98,13 @@ $router->add('/admin/delete/contact/:int', array(
     'action' => 'deleteContact',
     'id' => 1
 ))->setName('admin-delete-contact');
-
+//MailBox
+$router->add('/admin/mailbox', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'mailbox',
+    'action' => 'index'
+))->setName('admin-mailbox');
 
 //ContentManagerController
 

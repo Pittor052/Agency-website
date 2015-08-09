@@ -4,7 +4,7 @@
         <!-- Small boxes (Stat box) -->
         <div class="row">
             <div class="col-lg-12 col-xs-12">
-                <?php echo $this->partial('layouts/forms/contentManagerForm'); ?>
+                <?php echo $this->partial('layouts/components/displayContactMsgs'); ?>
             </div>
         </div>
     </section>
