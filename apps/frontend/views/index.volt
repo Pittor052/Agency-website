@@ -68,7 +68,7 @@
                 </li>
                 <li>
                     <!--<li><a href="/services">Services</a></li>-->
-                    <!--<li><a href="/products">Products</a></li>-->
+                    <!--<li><a href="/product">Products</a></li>-->
                     <!--<li><a href="/about">About</a></li>-->
                     <!--<li><a href="/contact">Contact Us</a></li>-->
                     <a href="/services">Services</a>
@@ -126,9 +126,9 @@
                     <!--<div>-->
                     <!--<h4>eShop</h4>-->
                     <!--<ul>-->
-                    <!--<li><a href="page-products-3-columns.html">Products listing (3 Columns)</a></li>-->
-                    <!--<li><a href="page-products-4-columns.html">Products listing (4 Columns)</a></li>-->
-                    <!--<li><a href="page-products-slider.html">Products Slider</a></li>-->
+                    <!--<li><a href="page-product-3-columns.html">Products listing (3 Columns)</a></li>-->
+                    <!--<li><a href="page-product-4-columns.html">Products listing (4 Columns)</a></li>-->
+                    <!--<li><a href="page-product-slider.html">Products Slider</a></li>-->
                     <!--<li><a href="page-product-details.html">Product Details</a></li>-->
                     <!--<li><a href="page-shopping-cart.html">Shopping Cart</a></li>-->
                     <!--</ul>-->

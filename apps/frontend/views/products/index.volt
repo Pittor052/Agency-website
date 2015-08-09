@@ -30,7 +30,7 @@
                 <br/>
                 <br/>
             {% endfor %}
-        {% else %}
+        {% elseif products %}
             {% if products.getGallery() %}
                 <img class="img-responsive" width="200" height="200"
                      src="{{ products.getGallery().getName() }}" alt="">

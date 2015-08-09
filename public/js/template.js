@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 	//Products slider
 	var produxtsSlider = $('.products-slider').bxSlider({
-		slideWidth: $('.products-slider .shop-item').outerWidth()-20, //Gets slide width
+		slideWidth: $('.product-slider .shop-item').outerWidth()-20, //Gets slide width
 		responsive: true,
 		minSlides: 1,
 		maxSlides: 4,

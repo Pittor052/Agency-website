@@ -1,4 +1,4 @@
-<form role="form" action="/admin/create/product" method="POST" enctype="multipart/form-data">
+<form role="form" action="/admin/products/add" method="POST" enctype="multipart/form-data">
     <div class="box-body">
         <div class="form-group">
             <label for="file">Избери файл</label>

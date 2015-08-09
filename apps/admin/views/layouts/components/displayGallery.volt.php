@@ -16,9 +16,6 @@
                     </ol>
                     <div class="carousel-inner">
                         <?php foreach ($gallery as $key => $obj) { ?>
-                        <?php if ($obj->getProducts()) { ?>
-                        <?php continue; ?>
-                        <?php } ?>
                         <?php if ($key == 1) { ?>
                         <?php $className = "item active" ?>
                         <?php } else { ?>

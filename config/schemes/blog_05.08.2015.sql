@@ -144,7 +144,7 @@ INSERT INTO `product_ref` VALUES (15,'ref#15',15),(16,'ref#16',16),(17,'ref#17',
 UNLOCK TABLES;
 
 --
--- Table structure for table `products`
+-- Table structure for table `product`
 --
 
 DROP TABLE IF EXISTS `products`;
@@ -162,13 +162,13 @@ CREATE TABLE `products` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `products`
+-- Dumping data for table `product`
 --
 
 LOCK TABLES `products` WRITE;
-/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
 INSERT INTO `products` VALUES (23,'test2','some text some text some text some text some text some text ','50',1,3),(24,'asd','desffdfbrgasf','60',1,2),(25,'Mara Podrobnata','some text some text some text some text some text some text ','50',1,1),(26,'Mara Podrobnata','some text some text some text some text some text some text ','60',1,1),(27,'Mara Podrobnata','desffdfbrgasf','2',1,1);
-/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

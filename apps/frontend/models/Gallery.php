@@ -43,7 +43,7 @@ class Gallery extends BaseModel
     {
         // $this->validation();
         $this->belongsTo('cat_id', 'Bolar\Frontend\Models\GalleryCat', 'id', array('alias' => 'category'));
-        $this->belongsTo('product_id', 'Bolar\Frontend\Models\Products', 'id', array('alias' => 'products'));
+        $this->belongsTo('product_id', 'Bolar\Frontend\Models\Products', 'id', array('alias' => 'product'));
         $this->setup(
             array('notNullValidations' => false)
         );

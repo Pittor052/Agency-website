@@ -16,9 +16,6 @@
                     </ol>
                     <div class="carousel-inner">
                         {% for key, obj in gallery%}
-                        {% if obj.getProducts() %}
-                        {% continue %}
-                        {%endif%}
                         {% if key == 1%}
                         <?php $className = "item active" ?>
                         {%else%}

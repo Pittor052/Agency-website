@@ -342,31 +342,20 @@
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="active treeview">
                     <a href="#">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i
+                        <i class="fa fa-gift"></i> <span>Products</span> <i
                                 class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                        <li><a href="/templates/admin/pages/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a>
+                        <li class="active"><a href="/admin/products"><i class="fa fa-circle-o"></i> List </a></li>
+                        <li><a href="/admin/products/add"><i class="fa fa-circle-o"></i> Import </a>
                         </li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-files-o"></i>
-                        <span>Layout Options</span>
-                        <span class="label label-primary pull-right">4</span>
+                    <a href="/admin/gallery">
+                        <i class="fa-file-image-o"></i>
+                        <span>Gallery</span>
                     </a>
-                    <ul class="treeview-menu">
-                        <li><a href="/templates/admin/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top
-                                Navigation</a></li>
-                        <li><a href="/templates/admin/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a>
-                        </li>
-                        <li><a href="/templates/admin/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a>
-                        </li>
-                        <li><a href="/templates/admin/pages/layout/collapsed-sidebar.html"><i
-                                        class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-                    </ul>
                 </li>
                 <li>
                     <a href="/templates/admin/pages/widgets.html">

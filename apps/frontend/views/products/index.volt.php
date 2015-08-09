@@ -30,7 +30,7 @@
                 <br/>
                 <br/>
             <?php } ?>
-        <?php } else { ?>
+        <?php } elseif ($products) { ?>
             <?php if ($products->getGallery()) { ?>
                 <img class="img-responsive" width="200" height="200"
                      src="<?php echo $products->getGallery()->getName(); ?>" alt="">

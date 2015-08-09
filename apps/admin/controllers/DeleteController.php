@@ -31,18 +31,7 @@ class DeleteController extends ControllerBase
         return $this->response->redirect('/admin');
     }
 
-    public function deleteProductAction($id)
-    {
-        $product = Products::findFirst("id = '$id'");
-        if (empty($id) || empty($product)) {
-            $this->flashSession->error('Something went wrong, please try again!');
-            return $this->response->redirect('/admin');
-        }
 
-        $product->delete();
-        $this->flashSession->success('Product is deleted !');
-        return $this->response->redirect('/admin');
-    }
 
     public function deleteGalleryAction($id)
     {

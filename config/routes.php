@@ -1,5 +1,6 @@
 <?php
 
+//Admin module
 $router->add('/admin', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
@@ -7,27 +8,82 @@ $router->add('/admin', array(
     'action' => 'index'
 ))->setName('admin-enter');
 
-$router->add('/admin/create/product', array(
+//Auth
+$router->add('/authenticate', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
-    'controller' => 'index',
-    'action' => 'createProduct'
-))->setName('admin-create-product');
+    'controller' => 'authenticate',
+    'action' => 'index'
+))->setName('admin-authenticate');
 
-$router->add('/admin/upload', array(
+//Products LIST
+
+$router->add('/admin/products', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
-    'controller' => 'index',
-    'action' => 'upload'
-))->setName('admin-upload');
+    'controller' => 'products',
+    'action' => 'index'
+))->setName('admin-product');
 
+$router->add('/admin/products/:int', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'products',
+    'action' => 'index',
+    'id' => 1
+))->setName('admin-product');
+
+//Products Add
+$router->add('/admin/products/add', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'products',
+    'action' => 'add',
+    'id' => 1
+))->setName('admin-product-add');
+
+//Products edit
+$router->add('/admin/products/edit/:int', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'product',
+    'action' => 'edit',
+    'id' => 1
+))->setName('admin-edit-product');
+
+//Products delete
+$router->add('/admin/products/delete/:int', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'product',
+    'action' => 'delete',
+    'id' => 1
+))->setName('admin-delete-product');
+
+//Gallery
 $router->add('/admin/gallery', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
-    'controller' => 'index',
-    'action' => 'gallery'
+    'controller' => 'gallery',
+    'action' => 'index'
 ))->setName('admin-gallery');
 
+$router->add('/admin/gallery/upload', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'gallery',
+    'action' => 'upload'
+))->setName('admin-gallery-upload');
+
+$router->add('/admin/delete/gallery/:params', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'delete',
+    'action' => 'deleteGallery',
+    'params' => 1
+))->setName('admin-delete-gallery');
+
+//Contact
 $router->add('/admin/contacts', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
@@ -42,29 +98,6 @@ $router->add('/admin/delete/contact/:int', array(
     'action' => 'deleteContact',
     'id' => 1
 ))->setName('admin-delete-contact');
-
-$router->add('/admin/delete/product/:int', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'delete',
-    'action' => 'deleteProduct',
-    'id' => 1
-))->setName('admin-delete-products');
-
-$router->add('/admin/delete/gallery/:params', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'delete',
-    'action' => 'deleteGallery',
-    'params' => 1
-))->setName('admin-delete-gallery');
-
-$router->add('/authenticate', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'authenticate',
-    'action' => 'index'
-))->setName('admin-authenticate');
 
 
 //ContentManagerController
@@ -92,21 +125,21 @@ $router->addPost('/admin/contnet-manager/delete/:int', array(
 ))->setName('admin-content-manager-create');
 
 
-//Frontend
+//Frontend Module
 $router->addGet('/products/:int', array(
     'namespace' => 'Bolar\Frontend\Controllers',
     'module' => 'frontend',
     'controller' => 'products',
     'action' => 'index',
     'id' => 1
-))->setName('frontend-products');
+))->setName('frontend-product');
 
 $router->addGet('/products', array(
     'namespace' => 'Bolar\Frontend\Controllers',
     'module' => 'frontend',
     'controller' => 'products',
     'action' => 'index',
-))->setName('frontend-products');
+))->setName('frontend-product');
 
 $router->addGet('/services', array(
     'namespace' => 'Bolar\Frontend\Controllers',
