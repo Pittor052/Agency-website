@@ -31,7 +31,7 @@
         <br/>
         {% endfor %}
         {% elseif products %}
-              {{ products.getName() }}
+        {{ products.getName() }}
         {% if products.getGallery() %}
 
         <img class="img-responsive" width="200" height="200"
@@ -40,8 +40,8 @@
         <img class="img-responsive" width="200" height="200"
              src="/img/system/default_product.jpg" alt="">
         {% endif %}
-              <p> <h4>Описание:</h4> {{ products.getDescription() }} </p>
-        <p> <h4>В наличност:</h4>   {{ products.getAvailable() }} </p>
+        <p> <h4>Описание:</h4> {{ products.getDescription() }} </p>
+        <p> <h4>В наличност:</h4> {{ products.getAvailable() }} </p>
         <p> <h4>Цена:</h4> {{ products.getPrice() }} </p>
         {% endif %}
     </div>

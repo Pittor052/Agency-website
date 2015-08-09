@@ -19,10 +19,16 @@ use Phalcon\Mvc\Model;
 
 class ContentManagerController extends ControllerBase
 {
+    public function indexAction()
+    {
+
+    }
+
     //Home page
     public function createAction()
     {
-        $this->view->disable();
+//        var_dump('aaaa');exit;
+//        $this->view->disable();
         if ($this->request->isPost()) {
             $contentManagerModel = new ContentManager();
             if (empty($contentManagerModel->save($this->request->getPost()))) {

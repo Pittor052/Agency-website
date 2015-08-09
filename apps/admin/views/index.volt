@@ -340,10 +340,18 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
+
+                <li class="treeview">
+                    <a href="/admin/content-manager">
+                        <i class="fa fa-cogs"></i>
+                        <span>Content Manager</span>
+                    </a>
+                </li>
+
                 <li class="active treeview">
                     <a href="#">
                         <i class="fa fa-gift"></i> <span>Products</span> <i
-                                class="fa fa-angle-left pull-right"></i>
+                            class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
                         <li class="active"><a href="/admin/products"><i class="fa fa-circle-o"></i> List </a></li>
@@ -373,11 +381,11 @@
                         <li><a href="/templates/admin/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a>
                         </li>
                         <li><a href="/templates/admin/pages/charts/morris.html"><i class="fa fa-circle-o"></i>
-                                Morris</a></li>
+                            Morris</a></li>
                         <li><a href="/templates/admin/pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a>
                         </li>
                         <li><a href="/templates/admin/pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline
-                                charts</a></li>
+                            charts</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -395,7 +403,7 @@
                         <li><a href="/templates/admin/pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a>
                         </li>
                         <li><a href="/templates/admin/pages/UI/timeline.html"><i class="fa fa-circle-o"></i>
-                                Timeline</a></li>
+                            Timeline</a></li>
                         <li><a href="/templates/admin/pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a>
                         </li>
                     </ul>
@@ -407,11 +415,11 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="/templates/admin/pages/forms/general.html"><i class="fa fa-circle-o"></i> General
-                                Elements</a></li>
+                            Elements</a></li>
                         <li><a href="/templates/admin/pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced
-                                Elements</a></li>
+                            Elements</a></li>
                         <li><a href="/templates/admin/pages/forms/editors.html"><i class="fa fa-circle-o"></i>
-                                Editors</a></li>
+                            Editors</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -421,7 +429,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="/templates/admin/pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple
-                                tables</a></li>
+                            tables</a></li>
                         <li><a href="/templates/admin/pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a>
                         </li>
                     </ul>
@@ -445,19 +453,19 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="/templates/admin/pages/examples/invoice.html"><i class="fa fa-circle-o"></i>
-                                Invoice</a></li>
+                            Invoice</a></li>
                         <li><a href="/templates/admin/pages/examples/login.html"><i class="fa fa-circle-o"></i>
-                                Login</a></li>
+                            Login</a></li>
                         <li><a href="/templates/admin/pages/examples/register.html"><i class="fa fa-circle-o"></i>
-                                Register</a></li>
+                            Register</a></li>
                         <li><a href="/templates/admin/pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i>
-                                Lockscreen</a></li>
+                            Lockscreen</a></li>
                         <li><a href="/templates/admin/pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a>
                         </li>
                         <li><a href="/templates/admin/pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a>
                         </li>
                         <li><a href="/templates/admin/pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank
-                                Page</a></li>
+                            Page</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -469,12 +477,12 @@
                         <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
                         <li>
                             <a href="#"><i class="fa fa-circle-o"></i> Level One <i
-                                        class="fa fa-angle-left pull-right"></i></a>
+                                    class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
                                 <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
                                 <li>
                                     <a href="#"><i class="fa fa-circle-o"></i> Level Two <i
-                                                class="fa fa-angle-left pull-right"></i></a>
+                                            class="fa fa-angle-left pull-right"></i></a>
                                     <ul class="treeview-menu">
                                         <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
                                         <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
@@ -486,7 +494,7 @@
                     </ul>
                 </li>
                 <li><a href="/templates/admin/documentation/index.html"><i class="fa fa-book"></i>
-                        <span>Documentation</span></a></li>
+                    <span>Documentation</span></a></li>
                 <li class="header">LABELS</li>
                 <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
                 <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>

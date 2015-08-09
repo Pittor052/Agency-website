@@ -1,5 +1,5 @@
 <div class="box box-primary">
-    <form role="form" action="/admin/contnet-manager/create" method="POST" enctype="multipart/form-data">
+    <form role="form" action="/admin/content-manager/create" method="POST" enctype="multipart/form-data">
         <div class="box-body">
             <div class="form-group">
                 <label for="file">Избери файл</label>

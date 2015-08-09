@@ -101,29 +101,36 @@ $router->add('/admin/delete/contact/:int', array(
 
 
 //ContentManagerController
-$router->addPost('/admin/contnet-manager/create', array(
+
+$router->add('/admin/content-manager', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'content-manager',
+    'action' => 'index'
+))->setName('admin-content-manager');
+
+$router->addPost('/admin/content-manager/create', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
     'controller' => 'content-manager',
     'action' => 'create'
 ))->setName('admin-content-manager-create');
 
-$router->addPost('/admin/contnet-manager/edit/:int', array(
+$router->addPost('/admin/content-manager/edit/:int', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
     'controller' => 'content-manager',
     'action' => 'edit',
     'id' => 1
-))->setName('admin-content-manager-create');
+))->setName('admin-content-manager-edit');
 
-$router->addPost('/admin/contnet-manager/delete/:int', array(
+$router->addPost('/admin/content-manager/delete/:int', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
     'controller' => 'content-manager',
     'action' => 'delete',
     'id' => 1
-))->setName('admin-content-manager-create');
-
+))->setName('admin-content-manager-delete');
 
 //Frontend Module
 $router->addGet('/products/:int', array(
