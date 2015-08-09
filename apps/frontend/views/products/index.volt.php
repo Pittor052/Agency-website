@@ -31,17 +31,18 @@
         <br/>
         <?php } ?>
         <?php } elseif ($products) { ?>
+              <?php echo $products->getName(); ?>
         <?php if ($products->getGallery()) { ?>
-        <?php echo $products->getName(); ?>
+
         <img class="img-responsive" width="200" height="200"
              src="<?php echo $products->getGallery()->getName(); ?>" alt="">
-        <p> <h4>Описание:</h4> <?php echo $products->getDescription(); ?> </p>
-        <p> <h4>В наличност:</h4>   <?php echo $products->getAvailable(); ?> </p>
-        <p> <h4>Цена:</h4> <?php echo $products->getPrice(); ?> </p>
         <?php } else { ?>
         <img class="img-responsive" width="200" height="200"
              src="/img/system/default_product.jpg" alt="">
         <?php } ?>
+              <p> <h4>Описание:</h4> <?php echo $products->getDescription(); ?> </p>
+        <p> <h4>В наличност:</h4>   <?php echo $products->getAvailable(); ?> </p>
+        <p> <h4>Цена:</h4> <?php echo $products->getPrice(); ?> </p>
         <?php } ?>
     </div>
 </div>
