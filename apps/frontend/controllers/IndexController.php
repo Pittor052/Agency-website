@@ -10,7 +10,7 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
-        $contentManager = ContentManager::find();
+        $contentManager = ContentManager::find("page_type = 'home'");
         $this->view->setVar('contentList', $contentManager);
     }
 

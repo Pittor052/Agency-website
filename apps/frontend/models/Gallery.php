@@ -42,6 +42,7 @@ class Gallery extends BaseModel
     public function initialize()
     {
         // $this->validation();
+        $this->belongsTo('id', 'Bolar\Frontend\Models\ContentManager', 'image_id', array('alias' => 'contentManager'));
         $this->belongsTo('cat_id', 'Bolar\Frontend\Models\GalleryCat', 'id', array('alias' => 'category'));
         $this->belongsTo('product_id', 'Bolar\Frontend\Models\Products', 'id', array('alias' => 'product'));
         $this->setup(
@@ -63,12 +64,12 @@ class Gallery extends BaseModel
         )));
 
 
-        $this->validate(new PresenceOf(
-            array(
-                "field" => "cat_id",
-                "message" => "Please select an category!"
-            )
-        ));
+//        $this->validate(new PresenceOf(
+//            array(
+//                "field" => "cat_id",
+//                "message" => "Please select an category!"
+//            )
+//        ));
 
         if ($this->validationHasFailed() == true) {
             return false;
@@ -108,6 +109,7 @@ class Gallery extends BaseModel
         return $this;
     }
 
+
     /**
      * Method to set the value of field name
      *
@@ -117,8 +119,15 @@ class Gallery extends BaseModel
     public function setName($name)
     {
         $folder = $this->getDi()->getRequest()->getPost()['category'];
-        $this->name = '/img/products/' . $folder . '/' . $name;
+        if (empty($folder)) {
+            $folder = $name;
+        }
 
+        if (!strstr($folder, '/img/products/')) {
+            $this->name = $folder . '/' . $name;
+        } else {
+            $this->name = $name;
+        }
         return $this;
     }
 
