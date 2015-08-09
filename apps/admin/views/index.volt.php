@@ -361,7 +361,7 @@
                 </li>
                 <li class="treeview">
                     <a href="/admin/gallery">
-                        <i class="fa-file-image-o"></i>
+                        <i class="fa fa-image"></i>
                         <span>Gallery</span>
                     </a>
                 </li>
