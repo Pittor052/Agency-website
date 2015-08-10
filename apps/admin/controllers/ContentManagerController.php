@@ -24,13 +24,19 @@ class ContentManagerController extends ControllerBase
 
     }
 
+
     //Home page
     public function createAction()
     {
-//        var_dump('aaaa');exit;
-//        $this->view->disable();
         if ($this->request->isPost()) {
+            if ($this->request->hasFiles(true) == true) {
+                $galleryId = $this->uploadToGallery(null, $this->getFolderName(), true, array(400, 243));
+                if (empty($galleryId)) {
+                    $this->response->redirect('admin');
+                }
+            }
             $contentManagerModel = new ContentManager();
+            $contentManagerModel->setImageId($galleryId);
             if (empty($contentManagerModel->save($this->request->getPost()))) {
                 $contentManagerModel->setErr();
                 return $this->responseHandling();
@@ -60,5 +66,10 @@ class ContentManagerController extends ControllerBase
             $contentManagerModel->delete();
             return $this->responseHandling('Success');
         }
+    }
+
+    private function getFolderName()
+    {
+        return 'pages' . DIRECTORY_SEPARATOR . $this->request->getPost('page_type') . DIRECTORY_SEPARATOR . $this->request->getPost('section');
     }
 }

@@ -12,6 +12,23 @@
                         <option value="about">About</option>
                         <option value="services">Services</option>
                     </select>
+                    <label for="category">Изберете секция!</label>
+                    <select class="form-control" name="section" id="section">
+                        <option value="header">Top</option>
+                        <option value="body">Middle</option>
+                        <option value="footer">Bottom</option>
+                    </select>
+                    <label for="category">Изберете разположение!</label>
+                    <select class="form-control" name="position" id="position">
+                        <option value="left">Left</option>
+                        <option value="center">Center</option>
+                        <option value="right">Right</option>
+                    </select>
+                    <label for="category">Изберете тип на елемента!</label>
+                    <select class="form-control" name="element_type" id="element_type">
+                        <option value="text_box">Text box</option>
+                        <option value="slider">Slider</option>
+                    </select>
                 </div>
             </div>
             {{ partial("layouts/components/ckEditor") }}

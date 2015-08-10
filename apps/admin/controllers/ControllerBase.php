@@ -27,28 +27,38 @@ class ControllerBase extends Controller
     /**
      * @param $productsModel
      */
-    protected function uploadToGallery($productsModel = null)
+    protected function uploadToGallery($productsModel = null, $folder = null, $returnGalleryId = false, array $crop = null)
     {
-        $folder = $this->request->getPost()['category'];
-
-        if (!is_dir(__DIR__ . '/../../../public/img/products/' . $folder . '/')) {
-            mkdir(__DIR__ . '/../../../public/img/products/' . $folder . '/', 0777);
+        //If not pass folder name, get from category
+        if (empty($folder) && empty($this->request->getPost()['category'])) {
+            return false;
+        } elseif (empty($folder) && $this->request->getPost()['category']) {
+            $folder = $this->request->getPost()['category'];
+        }
+        $dir = __DIR__ . '/../../../public/img/products/' . $folder . '/';
+        if (!is_dir($dir)) {
+            mkdir($dir, 0777, true);
         }
 
         foreach ($this->request->getUploadedFiles() as $file) {
 
             $galleryFileName = time() . '_' . $file->getName();
-            $fullPath = __DIR__ . '/../../../public/img/products/' . $folder . '/' . $galleryFileName;
+            $fullPath = $dir . $galleryFileName;
+            $filePathAndName = '/img/products/' . $folder . '/' . $galleryFileName;
             $file->moveTo($fullPath);
             $image = new \Phalcon\Image\Adapter\GD($fullPath);
-            $image->crop(400, 400);
+            if ($crop) {
+                $image->crop($crop['width'], $crop['height']);
+            } else {
+                $image->crop(400, 400);
+            }
             if (!$image->save()) {
                 var_dump($image);
                 exit;
             }
         }
         $data = array(
-            'name' => $galleryFileName,
+            'name' => $filePathAndName,
             'cat_id' => $this->request->getPost()['category'],
         );
         if ($productsModel) {
@@ -59,8 +69,9 @@ class ControllerBase extends Controller
         if (!$galleryModel->save($data)) {
             $galleryModel->setErr();
             $this->view->setVar('flash', $this->flash);
-        } else {
+        } elseif ($returnGalleryId) {
             $this->getDi()->getFlashSession()->success("Done!");
+            return $galleryModel->getId();
         }
     }
 }
