@@ -106,7 +106,7 @@ $router->add('/admin/mailbox', array(
     'action' => 'index'
 ))->setName('admin-mailbox');
 
-$router->add('/admin/mailbox/read-mail/:int', array(
+$router->add('/admin/mailbox/:int', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
     'controller' => 'mailbox',

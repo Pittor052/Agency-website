@@ -99,15 +99,18 @@
                                 </div>
                                 <!-- /.pull-right -->
                             </div>
+                            {% if contactList is iterable %}
+                            {% for obj in contactList %}
                             <div class="table-responsive mailbox-messages">
                                 <table class="table table-hover table-striped">
                                     <tbody>
-                                    {% for obj in contactList%}
+
                                     <tr>
                                         <td><input type="checkbox"/></td>
                                         <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a>
                                         </td>
-                                        <td class="mailbox-name"><a href="/admin/mailbox/read-mail/{{ obj.getId() }}">{{ obj.getName() }}</a></td>
+                                        <td class="mailbox-name"><a href="/admin/mailbox/{{obj.getId()}}">{{
+                                            obj.getName() }}</a></td>
                                         <td class="mailbox-subject"
                                             style="text-overflow: ellipsis;"><b>{{obj.getTopic()}}</b>
                                             -{{obj.getMsg()}}
@@ -116,45 +119,53 @@
                                         <td class="mailbox-date">5 mins ago</td>
                                     </tr>
                                     </tbody>
-                                    {%endfor%}
                                 </table>
-                                <!-- /.table -->
+
                             </div>
-                            <!-- /.mail-box-messages -->
-                        </div>
-                        <!-- /.box-body -->
-                        <div class="box-footer no-padding">
-                            <div class="mailbox-controls">
-                                <!-- Check all button -->
-                                <button class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
-                                </button>
-                                <div class="btn-group">
-                                    <button class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
-                                    <button class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
-                                    <button class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
-                                </div>
-                                <!-- /.btn-group -->
-                                <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                                <div class="pull-right">
-                                    1-50/200
+                            {% endfor %}
+                            {% else%}
+                            {%if contactList.getId() %}
+                            {{ partial("layouts/components/readMail") }}
+                            {%endif%}
+                            {%endif%}
+                            <!-- /.box-body -->
+                            <div class="box-footer no-padding">
+                                <div class="mailbox-controls">
+                                    <!-- Check all button -->
+                                    <button class="btn btn-default btn-sm checkbox-toggle"><i
+                                            class="fa fa-square-o"></i>
+                                    </button>
                                     <div class="btn-group">
-                                        <button class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i>
-                                        </button>
-                                        <button class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i>
-                                        </button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
                                     </div>
                                     <!-- /.btn-group -->
+                                    <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <div class="pull-right">
+                                        1-50/200
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i>
+                                            </button>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.btn-group -->
+                                    </div>
+                                    <!-- /.pull-right -->
                                 </div>
-                                <!-- /.pull-right -->
                             </div>
+
                         </div>
+                        <!-- /. box -->
+
                     </div>
-                    <!-- /. box -->
+                    <!-- /.col -->
                 </div>
-                <!-- /.col -->
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
         </section>
+
         <!-- /.content -->
     </div>
     <!-- jQuery 2.1.4 -->
