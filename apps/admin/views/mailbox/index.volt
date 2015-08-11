@@ -29,11 +29,11 @@
                         <div class="box-body no-padding">
                             <ul class="nav nav-pills nav-stacked">
                                 <li class="active"><a href="#"><i class="fa fa-inbox"></i> Inbox <span
-                                        class="label label-primary pull-right">12</span></a></li>
+                                                class="label label-primary pull-right">12</span></a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
                                 <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
                                 <li><a href="#"><i class="fa fa-filter"></i> Junk <span
-                                        class="label label-warning pull-right">65</span></a></li>
+                                                class="label label-warning pull-right">65</span></a></li>
                                 <li><a href="#"><i class="fa fa-trash-o"></i> Trash</a></li>
                             </ul>
                         </div>
@@ -62,78 +62,25 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-md-9">
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Inbox</h3>
+                    {% if contactList is iterable %}
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Inbox</h3>
 
-                            <div class="box-tools pull-right">
-                                <div class="has-feedback">
-                                    <input type="text" class="form-control input-sm" placeholder="Search Mail"/>
-                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                </div>
-                            </div>
-                            <!-- /.box-tools -->
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body no-padding">
-                            <div class="mailbox-controls">
-                                <!-- Check all button -->
-                                <button class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
-                                </button>
-                                <div class="btn-group">
-                                    <button class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
-                                    <button class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
-                                    <button class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
-                                </div>
-                                <!-- /.btn-group -->
-                                <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-                                <div class="pull-right">
-                                    1-50/200
-                                    <div class="btn-group">
-                                        <button class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i>
-                                        </button>
-                                        <button class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i>
-                                        </button>
+                                <div class="box-tools pull-right">
+                                    <div class="has-feedback">
+                                        <input type="text" class="form-control input-sm" placeholder="Search Mail"/>
+                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
                                     </div>
-                                    <!-- /.btn-group -->
                                 </div>
-                                <!-- /.pull-right -->
+                                <!-- /.box-tools -->
                             </div>
-                            {% if contactList is iterable %}
-                            {% for obj in contactList %}
-                            <div class="table-responsive mailbox-messages">
-                                <table class="table table-hover table-striped">
-                                    <tbody>
-
-                                    <tr>
-                                        <td><input type="checkbox"/></td>
-                                        <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a>
-                                        </td>
-                                        <td class="mailbox-name"><a href="/admin/mailbox/{{obj.getId()}}">{{
-                                            obj.getName() }}</a></td>
-                                        <td class="mailbox-subject"
-                                            style="text-overflow: ellipsis;"><b>{{obj.getTopic()}}</b>
-                                            -{{obj.getMsg()}}
-                                        </td>
-                                        <td class="mailbox-attachment"></td>
-                                        <td class="mailbox-date">5 mins ago</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                            {% endfor %}
-                            {% else%}
-                            {%if contactList.getId() %}
-                            {{ partial("layouts/components/readMail") }}
-                            {%endif%}
-                            {%endif%}
-                            <!-- /.box-body -->
-                            <div class="box-footer no-padding">
+                            <!-- /.box-header -->
+                            <div class="box-body no-padding">
                                 <div class="mailbox-controls">
                                     <!-- Check all button -->
                                     <button class="btn btn-default btn-sm checkbox-toggle"><i
-                                            class="fa fa-square-o"></i>
+                                                class="fa fa-square-o"></i>
                                     </button>
                                     <div class="btn-group">
                                         <button class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
@@ -154,12 +101,69 @@
                                     </div>
                                     <!-- /.pull-right -->
                                 </div>
+
+                                {% for obj in contactList %}
+                                    <div class="table-responsive mailbox-messages">
+                                        <table class="table table-hover table-striped">
+                                            <tbody>
+
+                                            <tr>
+                                                <td><input type="checkbox"/></td>
+                                                <td class="mailbox-star"><a href="#"><i
+                                                                class="fa fa-star text-yellow"></i></a>
+                                                </td>
+                                                <td class="mailbox-name"><a
+                                                            href="/admin/mailbox/{{ obj.getId() }}">{{ obj.getName() }}</a>
+                                                </td>
+                                                <td class="mailbox-subject"
+                                                    style="text-overflow: ellipsis;"><b>{{ obj.getTopic() }}</b>
+                                                    -{{ obj.getMsg() }}
+                                                </td>
+                                                <td class="mailbox-attachment"></td>
+                                                <td class="mailbox-date">5 mins ago</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                {% endfor %}
+                                <!-- /.box-body -->
+                                <div class="box-footer no-padding">
+                                    <div class="mailbox-controls">
+                                        <!-- Check all button -->
+                                        <button class="btn btn-default btn-sm checkbox-toggle"><i
+                                                    class="fa fa-square-o"></i>
+                                        </button>
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i>
+                                            </button>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+                                            <button class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+                                        </div>
+                                        <!-- /.btn-group -->
+                                        <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                        <div class="pull-right">
+                                            1-50/200
+                                            <div class="btn-group">
+                                                <button class="btn btn-default btn-sm"><i
+                                                            class="fa fa-chevron-left"></i>
+                                                </button>
+                                                <button class="btn btn-default btn-sm"><i
+                                                            class="fa fa-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.btn-group -->
+                                        </div>
+                                        <!-- /.pull-right -->
+                                    </div>
+                                </div>
+
                             </div>
-
+                            <!-- /. box -->
                         </div>
-                        <!-- /. box -->
-
-                    </div>
+                    {% elseif contactList.getId() %}
+                        {{ partial("layouts/components/readMail") }}
+                    {% endif %}
                     <!-- /.col -->
                 </div>
                 <!-- /.row -->

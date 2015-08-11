@@ -67,7 +67,4 @@
         </div>
     </div>
 </div>
-<!-- Press Coverage -->
-
-<!-- Services -->
 
