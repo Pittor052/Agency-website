@@ -7,6 +7,19 @@
                 <span class="">
              <br>   <?php echo $product->getName(); ?>
             </span>
+<<<<<<< HEAD
+                <a href="/admin/products/delete/<?php echo $product->getId(); ?>" >
+                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                            class="fa fa-trash-o"></i> Delete
+                    </button>
+                </a>
+                <a href="/admin/products/edit/<?php echo $product->getId(); ?>" >
+                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                            class="fa fa-edit"></i> Edit
+                    </button>
+                </a>
+=======
+>>>>>>> 9c32b60657c04413362f543ccc2ee4fbf9692cdb
                 <a class="thumbnail" href="">
                     <?php if ($product->getGallery()) { ?>
                     <img class="img-responsive" width="200" height="200"
@@ -46,9 +59,15 @@
                         class="fa fa-trash-o"></i> Delete
                 </button>
             </a>
+<<<<<<< HEAD
             <a href="/admin/products/edit/<?php echo $products->getId(); ?>">
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
                         class="fa fa-trash-o"></i> Edit
+=======
+            <a href="/admin/products/edit/<?php echo $products->getId(); ?>" >
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                        class="fa fa-edit"></i> Edit
+>>>>>>> 4b9f4624fa4addd896a6726e1b94a80706dc0886
                 </button>
             </a>
             <?php } else { ?>
@@ -60,9 +79,15 @@
                         class="fa fa-trash-o"></i> Delete
                 </button>
             </a>
+<<<<<<< HEAD
             <a href="/admin/products/edit/<?php echo $products->getId(); ?>">
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
                         class="fa fa-trash-o"></i> Edit
+=======
+            <a href="/admin/products/edit/<?php echo $products->getId(); ?>" >
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                        class="fa fa-edit"></i> Edit
+>>>>>>> 4b9f4624fa4addd896a6726e1b94a80706dc0886
                 </button>
             </a>
             <?php } ?>

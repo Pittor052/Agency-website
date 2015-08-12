@@ -46,7 +46,7 @@ $router->add('/admin/products/add', array(
 $router->add('/admin/products/edit/:int', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
-    'controller' => 'product',
+    'controller' => 'products',
     'action' => 'edit',
     'id' => 1
 ))->setName('admin-edit-product');
