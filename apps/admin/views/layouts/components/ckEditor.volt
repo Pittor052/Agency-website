@@ -20,7 +20,9 @@
                 <div class="box-body pad">
 
                     <textarea id="editor1" name="content" rows="10" cols="80">
-
+                            {% if editData %}
+                                {{ editData.getContent() }}
+                            {% endif %}
                     </textarea>
 
                 </div>

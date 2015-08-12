@@ -130,15 +130,15 @@ $router->addPost('/admin/content-manager/create', array(
     'action' => 'create'
 ))->setName('admin-content-manager-create');
 
-$router->addPost('/admin/content-manager/edit/:int', array(
+$router->add('/admin/content-manager/edit/:params', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
     'controller' => 'content-manager',
     'action' => 'edit',
-    'id' => 1
+    'params' => 1
 ))->setName('admin-content-manager-edit');
 
-$router->addPost('/admin/content-manager/delete/:int', array(
+$router->addGet('/admin/content-manager/delete/:int', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
     'controller' => 'content-manager',

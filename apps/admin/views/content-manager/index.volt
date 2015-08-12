@@ -7,6 +7,19 @@
                 {{ partial("layouts/forms/contentManagerForm") }}
             </div>
         </div>
+        <div class="row">
+            {% for obj in contentManager %}
+                <div class="col-sm-7 col-sm-offset-2">
+                <span>
+                  <p>{{ obj.getContent() }}</p>
+                    <p class="pull-right">
+                        <a href="/admin/content-manager/edit/{{ obj.getId() }}" class="btn btn-success">Edit</a>
+                        <a href="/admin/content-manager/delete/{{ obj.getId() }}" class="btn btn-danger">Delete</a>
+                    </p>
+                </span>
+                </div>
+            {% endfor %}
+        </div>
     </section>
 </div>
 </div>

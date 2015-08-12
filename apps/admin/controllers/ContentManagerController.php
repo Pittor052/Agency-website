@@ -21,7 +21,8 @@ class ContentManagerController extends ControllerBase
 {
     public function indexAction()
     {
-
+        $contentManagerModel = ContentManager::find();
+        $this->view->setVar('contentManager', $contentManagerModel);
     }
 
 
@@ -43,28 +44,36 @@ class ContentManagerController extends ControllerBase
             }
             return $this->responseHandling('Success', '/admin/content-manager');
         }
+        $this->view->setVar('url', '/admin/content-manager/create');
     }
 
-    public function editAction($id)
+    public function editAction($id = null)
     {
-        $this->view->disable();
         if ($this->request->isPost()) {
+
             $contentManagerModel = ContentManager::findFirst("id = '$id'");
             if (empty($contentManagerModel->save($this->request->getPost()))) {
                 $contentManagerModel->setErr();
                 return $this->responseHandling();
             }
-            return $this->responseHandling('Success');
+            return $this->responseHandling('Success', '/admin/content-manager');
+        } else if (!empty($id) && $this->request->isGet()) {
+            $contentModel = ContentManager::findFirst("id = '$id'");
+            if (!$contentModel) {
+                return $this->responseHandling('Wrong article !', '/admin/content-manager');
+            }
+            $this->view->setVar('url', '/admin/content-manager/edit/' . $id);
+            $this->view->setVar('editData', $contentModel);
         }
     }
 
     public function deleteAction($id)
     {
         $this->view->disable();
-        if ($this->request->isPost()) {
+        if ($this->request->isGet()) {
             $contentManagerModel = ContentManager::findFirst("id = '$id'");
             $contentManagerModel->delete();
-            return $this->responseHandling('Success');
+            return $this->responseHandling('Success', '/admin/content-manager');
         }
     }
 
