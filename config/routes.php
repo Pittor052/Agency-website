@@ -55,7 +55,7 @@ $router->add('/admin/products/edit/:int', array(
 $router->add('/admin/products/delete/:int', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
-    'controller' => 'product',
+    'controller' => 'products',
     'action' => 'delete',
     'id' => 1
 ))->setName('admin-delete-product');
