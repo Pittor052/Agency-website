@@ -25,13 +25,12 @@
                     <!-- /.mailbox-controls -->
                     <div class="mailbox-read-message">
                         <h4>*message : <?php echo $obj->getMsg(); ?></h4>
-
                     </div>
                 </div>
                 <!-- /.mailbox-read-info -->
                 <div class="mailbox-controls with-border text-center">
                     <div class="btn-group">
-                        <a href="/admin/delete/contact/<?php echo $obj->getId(); ?>" >
+                        <a href="/admin/mailbox/delete/contact/<?php echo $obj->getId(); ?>" >
                             <button class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"  method="POST">
                                 <i class="fa fa-trash-o"></i></button>
                         </a>

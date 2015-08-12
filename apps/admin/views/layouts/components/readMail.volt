@@ -16,37 +16,15 @@
         </div>
         <!-- /.box-header -->
         <div class="box-body no-padding">
-            <div class="mailbox-read-info">
+            <div class="mailbox-read-info ">
                 <h3>Topic: {{contactList.getTopic()}}</h3>
                 <h5>Name: {{contactList.getName()}}</h5>
                 <h5>From: {{contactList.getEmail()}}</h5>
 
 
                 <!-- /.mailbox-read-info -->
-                <div class="mailbox-controls with-border text-center">
-                    <div class="btn-group">
-                        <button class="btn btn-default btn-sm"
-                                data-toggle="tooltip"
-                                title="Delete"><i
-                                class="fa fa-trash-o"></i></button>
-                        <button class="btn btn-default btn-sm"
-                                data-toggle="tooltip"
-                                title="Reply"><i
-                                class="fa fa-reply"></i></button>
-                        <button class="btn btn-default btn-sm"
-                                data-toggle="tooltip"
-                                title="Forward"><i
-                                class="fa fa-share"></i></button>
-                    </div>
-                    <!-- /.btn-group -->
-                    <button class="btn btn-default btn-sm"
-                            data-toggle="tooltip"
-                            title="Print"><i
-                            class="fa fa-print"></i></button>
-                </div>
-                <!-- /.mailbox-controls -->
                 <div class="mailbox-read-message">
-                    <p>{{contactList.getMsg()}}</p>
+                    <h3>Message: </h3><br><br><p>{{contactList.getMsg()}}</p>
                 </div>
 
 
@@ -61,9 +39,11 @@
                         class="fa fa-share"></i> Forward
                 </button>
             </div>
-            <button class="btn btn-default"><i
+            <a href="/admin/mailbox/delete/contact/{{ contactList.getId() }}" >
+            <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                     class="fa fa-trash-o"></i> Delete
             </button>
+                </a>
             <button class="btn btn-default"><i class="fa fa-print"></i>
                 Print
             </button>

@@ -32,4 +32,16 @@ class MailboxController extends ControllerBase
 
     }
 
+    public function deleteContactAction($id)
+    {
+        $contacts = Contact::findFirst("id = '$id'");
+        if (!$contacts) {
+            return $this->flashSession->error('Something went wrong, please try again!');
+        }
+        if (!$contacts->delete()) {
+
+        }
+        $this->flashSession->success('Contact message is deleted !');
+        return $this->response->redirect('/admin/mailbox');
+    }
 }
