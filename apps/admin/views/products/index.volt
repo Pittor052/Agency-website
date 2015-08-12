@@ -25,6 +25,11 @@
                             class="fa fa-trash-o"></i> Delete
                     </button>
                  </a>
+                     <a href="/admin/products/edit/{{product.getId()}}" >
+                         <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                                 class="fa fa-trash-o"></i> Edit
+                         </button>
+                     </a>
                 </p>
             </span>
             </div>
