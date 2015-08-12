@@ -46,6 +46,11 @@
                         class="fa fa-trash-o"></i> Delete
                 </button>
             </a>
+            <a href="/admin/products/edit/{{products.getId()}}" >
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                        class="fa fa-trash-o"></i> Edit
+                </button>
+            </a>
             {% else %}
            <br> {{products.getName()}}
             <img class="img-responsive" width="200" height="200"
@@ -53,6 +58,11 @@
             <a href="/admin/products/delete/{{products.getId()}}" >
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                         class="fa fa-trash-o"></i> Delete
+                </button>
+            </a>
+            <a href="/admin/products/edit/{{products.getId()}}" >
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                        class="fa fa-trash-o"></i> Edit
                 </button>
             </a>
             {% endif %}

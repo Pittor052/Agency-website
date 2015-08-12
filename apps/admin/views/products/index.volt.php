@@ -7,19 +7,6 @@
                 <span class="">
              <br>   <?php echo $product->getName(); ?>
             </span>
-<<<<<<< HEAD
-                <a href="/admin/products/delete/<?php echo $product->getId(); ?>" >
-                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
-                            class="fa fa-trash-o"></i> Delete
-                    </button>
-                </a>
-                <a href="/admin/products/edit/<?php echo $product->getId(); ?>" >
-                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
-                            class="fa fa-edit"></i> Edit
-                    </button>
-                </a>
-=======
->>>>>>> 9c32b60657c04413362f543ccc2ee4fbf9692cdb
                 <a class="thumbnail" href="">
                     <?php if ($product->getGallery()) { ?>
                     <img class="img-responsive" width="200" height="200"
@@ -33,17 +20,17 @@
                 <?php echo substr($product->getDescription(),0, 40); ?>
                 <br><a href="http://store.dev/admin/products/<?php echo $product->id; ?>">read more...</a>
                  <p class="pull-right">
-                     <a href="/admin/products/delete/<?php echo $product->getId(); ?>">
-                         <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
-                                 class="fa fa-trash-o"></i> Delete
-                         </button>
-                     </a>
-                     <a href="/admin/products/edit/<?php echo $product->getId(); ?>">
-                         <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
+                  <a href="/admin/products/delete/<?php echo $product->getId(); ?>" >
+                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                            class="fa fa-trash-o"></i> Delete
+                    </button>
+                 </a>
+                     <a href="/admin/products/edit/<?php echo $product->getId(); ?>" >
+                         <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                                  class="fa fa-trash-o"></i> Edit
                          </button>
                      </a>
-                 </p>
+                </p>
             </span>
             </div>
             <?php } ?>
@@ -54,45 +41,22 @@
             <br><br>
             <img class="img-responsive" width="200" height="200"
                  src="<?php echo $products->getGallery()->getName(); ?>" alt="">
-            <a href="/admin/products/delete/<?php echo $products->getId(); ?>">
-                <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
-                        class="fa fa-trash-o"></i> Delete
-                </button>
-            </a>
-<<<<<<< HEAD
-            <a href="/admin/products/edit/<?php echo $products->getId(); ?>">
-                <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
-                        class="fa fa-trash-o"></i> Edit
-=======
-            <a href="/admin/products/edit/<?php echo $products->getId(); ?>" >
+            <a href="/admin/products/delete/<?php echo $products->getId(); ?>" >
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
-                        class="fa fa-edit"></i> Edit
->>>>>>> 4b9f4624fa4addd896a6726e1b94a80706dc0886
+                        class="fa fa-trash-o"></i> Delete
                 </button>
             </a>
             <?php } else { ?>
-            <br> <?php echo $products->getName(); ?>
+           <br> <?php echo $products->getName(); ?>
             <img class="img-responsive" width="200" height="200"
                  src="/img/system/default_product.jpg" alt="">
-            <a href="/admin/products/delete/<?php echo $products->getId(); ?>">
-                <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
-                        class="fa fa-trash-o"></i> Delete
-                </button>
-            </a>
-<<<<<<< HEAD
-            <a href="/admin/products/edit/<?php echo $products->getId(); ?>">
-                <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
-                        class="fa fa-trash-o"></i> Edit
-=======
-            <a href="/admin/products/edit/<?php echo $products->getId(); ?>" >
+            <a href="/admin/products/delete/<?php echo $products->getId(); ?>" >
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
-                        class="fa fa-edit"></i> Edit
->>>>>>> 4b9f4624fa4addd896a6726e1b94a80706dc0886
+                        class="fa fa-trash-o"></i> Delete
                 </button>
             </a>
             <?php } ?>
             <br>
-
             <p> <h4>Описание:</h4> <?php echo $products->getDescription(); ?> </p>
             <p> <h4>В наличност:</h4> <?php echo $products->getAvailable(); ?> </p>
             <p> <h4>Цена:</h4> <?php echo $products->getPrice(); ?> </p>
