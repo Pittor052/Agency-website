@@ -78,7 +78,11 @@ class ContentManager extends BaseModel
      */
     public function setPageType($page_type)
     {
-        $this->page_type = $page_type;
+        if (!$this->getDI()->getRequest()->getPost()['section'] == 'bottom') {
+            $this->page_type = 'All';
+        } else {
+            $this->page_type = $page_type;
+        }
     }
 
     /**

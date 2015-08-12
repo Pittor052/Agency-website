@@ -15,7 +15,7 @@ class ContactController extends ControllerBase
 {
     public function indexAction()
     {
-
+        $this->setContentToView();
         if ($this->request->isPost()) {
             $contactModel = new Contact();
             if (!$contactModel->save($this->request->getPost())) {

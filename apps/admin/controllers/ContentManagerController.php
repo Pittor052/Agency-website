@@ -41,7 +41,7 @@ class ContentManagerController extends ControllerBase
                 $contentManagerModel->setErr();
                 return $this->responseHandling();
             }
-            return $this->responseHandling('Success');
+            return $this->responseHandling('Success', '/admin/content-manager');
         }
     }
 

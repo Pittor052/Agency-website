@@ -27,43 +27,27 @@
         <div class="row">
             {% if  contentList and contentList|length > 0 %}
                 {% for key, obj in contentList %}
-                    <div class="col-md-4 col-sm-6">
-                        <div class="row">
-                            {% if obj.position == 'left' %}
-                                <a href="#">obj.content</a>
-                            {% endif %}
+                    {% if obj.getPosition() == 'left' and obj.getElementType() =='text_box' %}
+                        <div class="row col-md-3 col-sm-6">
+                            <div class="row">
+                                <a href="#">{{ obj.getContent() }}</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="row">
-                            {% if obj.position == 'center' %}
-                                <a href="#">obj.content</a>
-                            {% endif %}
+                    {% elseif obj.getPosition() == 'center' and obj.getElementType() =='text_box' %}
+                        <div class="row col-md-3 col-sm-6 col-sm-offset-1">
+                            <div class="row">
+                                <a href="#">{{ obj.getContent() }}</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="row">
-                            {% if obj.position == 'right' %}
-                                <a href="#">obj.content</a>
-                            {% endif %}
+                    {% elseif  obj.getPosition() == 'right' and obj.getElementType() =='text_box' %}
+                        <div class="row col-md-3 col-sm-6 col-sm-offset-1">
+                            <div class="row">
+                                <a href="#">{{ obj.getContent() }}t</a>
+                            </div>
                         </div>
-                    </div>
+                    {% endif %}
                 {% endfor %}
             {% endif %}
-        </div>
-    </div>
-</div>
-<div class="container">
-
-    <div class="row">
-
-        <div align="center" class="col-lg-12">
-            <h1 class="page-header"></h1>
-            {% for obj in contentList %}
-                {% if obj.getPageType() == 'home' %}
-                    {{ obj.getContent() }}
-                {% endif %}
-            {% endfor %}
         </div>
     </div>
 </div>

@@ -1,14 +1,17 @@
-<div class="container">
-
-    <div class="row">
-
-        <div align="center" class="col-lg-12">
-            <h1 class="page-header">УСЛУГИ</h1>
-            <?php foreach ($contentList as $obj) { ?>
-            <?php if ($obj->getPageType() == 'services') { ?>
-            <?php echo $obj->getContent(); ?>
-            <?php } ?>
-            <?php } ?>
+<div class="content-wrapper">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <?php foreach ($contentList as $obj) { ?>
+                    <div class="row col-md-12 col-sm-12">
+                        <div class="row">
+                            <?php if ($obj->getPageType() == 'services') { ?>
+                                <p class="glyphicon-font"><?php echo $obj->getContent(); ?></p>
+                            <?php } ?>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
         </div>
     </div>
 </div>

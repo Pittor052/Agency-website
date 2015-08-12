@@ -10,6 +10,7 @@ class ProductsController extends ControllerBase
 {
     public function indexAction($id = null)
     {
+        $this->setContentToView();
         if ($id) {
             $productModel = Products::findFirst("id = '$id'");
         } else {

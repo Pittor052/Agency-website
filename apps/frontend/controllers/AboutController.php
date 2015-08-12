@@ -10,11 +10,8 @@ class AboutController extends ControllerBase
 
     public function indexAction()
     {
-        $contentManager = ContentManager::find();
-        $this->view->setVar('contentList', $contentManager);
+        $this->setContentToView('about');
     }
-
-
 }
 
 

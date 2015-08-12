@@ -159,14 +159,6 @@
 <div class="footer">
     <div class="container">
         <div class="row">
-            <!--<div class="col-footer col-md-3 col-xs-6">-->
-            <!--<h3>Our Latest Work</h3>-->
-            <!--<div class="portfolio-item">-->
-            <!--<div class="portfolio-image">-->
-            <!--<a href="page-portfolio-item.html"><img src="img/portfolio6.jpg" alt="Project Name"></a>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
             <div class="col-footer col-md-3 col-xs-6">
                 <h3>Navigate</h3>
                 <ul class="no-list-style footer-navigate-section">
@@ -181,27 +173,31 @@
                 <h3>Contacts</h3>
 
                 <p class="contact-us-details">
-                    <b>Address:</b> 123 Fake Street, LN1 2ST, London, United Kingdom<br/>
-                    <b>Phone:</b> +44 123 654321<br/>
-                    <b>Fax:</b> +44 123 654321<br/>
-                    <b>Email:</b> <a
-                            href="mailto:getintoutch@yourcompanydomain.com">getintoutch@yourcompanydomain.com</a>
+                    <?php foreach ($contentList as $obj) { ?>
+                        <?php if ($obj->getSection() == 'footer' && $obj->getPosition() == 'center' && $obj->getElementType() == 'text_box') { ?>
+                            <?php echo $obj->getContent(); ?>
+                        <?php } ?>
+                    <?php } ?>
                 </p>
             </div>
             <div class="col-footer col-md-2 col-xs-6">
                 <h3>Stay Connected</h3>
                 <ul class="footer-stay-connected no-list-style">
                     <li>
-                        <a href="https://www.facebook.com/pages/%D0%9F%D0%90-%D0%91%D0%BE%D0%BB%D0%B0%D1%80/1448085492170894?fref=ts"
-                           class="facebook"></a></li>
-                    <!--<li><a href="#" class="twitter"></a></li>-->
-                    <!--<li><a href="#" class="googleplus"></a></li>-->
+                        <?php foreach ($contentList as $obj) { ?>
+                            <?php if ($obj->getSection() == 'footer' && $obj->getPosition() == 'right' && $obj->getElementType() == 'text_box') { ?>
+                                <?php echo $obj->getContent(); ?>
+                            <?php } ?>
+                        <?php } ?>
+                        
+                        
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="footer-copyright">&copy; 2013 mPurpose. All rights reserved.</div>
+                <div class="footer-copyright">&copy; 2015 Borderless-Professionals. All rights reserved.</div>
             </div>
         </div>
     </div>

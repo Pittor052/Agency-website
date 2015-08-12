@@ -27,41 +27,25 @@
         <div class="row">
             <?php if ($contentList && $this->length($contentList) > 0) { ?>
                 <?php foreach ($contentList as $key => $obj) { ?>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="row">
-                            <?php if ($obj->position == 'left') { ?>
-                                <a href="#">obj.content</a>
-                            <?php } ?>
+                    <?php if ($obj->getPosition() == 'left' && $obj->getElementType() == 'text_box') { ?>
+                        <div class="row col-md-3 col-sm-6">
+                            <div class="row">
+                                <a href="#"><?php echo $obj->getContent(); ?></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="row">
-                            <?php if ($obj->position == 'center') { ?>
-                                <a href="#">obj.content</a>
-                            <?php } ?>
+                    <?php } elseif ($obj->getPosition() == 'center' && $obj->getElementType() == 'text_box') { ?>
+                        <div class="row col-md-3 col-sm-6 col-sm-offset-1">
+                            <div class="row">
+                                <a href="#"><?php echo $obj->getContent(); ?></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="row">
-                            <?php if ($obj->position == 'right') { ?>
-                                <a href="#">obj.content</a>
-                            <?php } ?>
+                    <?php } elseif ($obj->getPosition() == 'right' && $obj->getElementType() == 'text_box') { ?>
+                        <div class="row col-md-3 col-sm-6 col-sm-offset-1">
+                            <div class="row">
+                                <a href="#"><?php echo $obj->getContent(); ?>t</a>
+                            </div>
                         </div>
-                    </div>
-                <?php } ?>
-            <?php } ?>
-        </div>
-    </div>
-</div>
-<div class="container">
-
-    <div class="row">
-
-        <div align="center" class="col-lg-12">
-            <h1 class="page-header"></h1>
-            <?php foreach ($contentList as $obj) { ?>
-                <?php if ($obj->getPageType() == 'home') { ?>
-                    <?php echo $obj->getContent(); ?>
+                    <?php } ?>
                 <?php } ?>
             <?php } ?>
         </div>
