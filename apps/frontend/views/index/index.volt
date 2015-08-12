@@ -27,19 +27,19 @@
         <div class="row">
             {% if  contentList and contentList|length > 0 %}
                 {% for key, obj in contentList %}
-                    {% if obj.getPosition() == 'left' and obj.getElementType() =='text_box' %}
+                    {% if obj.getPosition() == 'left' and obj.getElementType() =='text_box' and obj.getPageType() !== 'All' %}
                         <div class="row col-md-3 col-sm-6">
                             <div class="row">
                                 <a href="#">{{ obj.getContent() }}</a>
                             </div>
                         </div>
-                    {% elseif obj.getPosition() == 'center' and obj.getElementType() =='text_box' %}
+                    {% elseif obj.getPosition() == 'center' and obj.getElementType() =='text_box' and  obj.getPageType() !== 'All'%}
                         <div class="row col-md-3 col-sm-6 col-sm-offset-1">
                             <div class="row">
                                 <a href="#">{{ obj.getContent() }}</a>
                             </div>
                         </div>
-                    {% elseif  obj.getPosition() == 'right' and obj.getElementType() =='text_box' %}
+                    {% elseif  obj.getPosition() == 'right' and obj.getElementType() =='text_box' and obj.getPageType() !== 'All' %}
                         <div class="row col-md-3 col-sm-6 col-sm-offset-1">
                             <div class="row">
                                 <a href="#">{{ obj.getContent() }}t</a>

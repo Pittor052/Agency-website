@@ -27,19 +27,19 @@
         <div class="row">
             <?php if ($contentList && $this->length($contentList) > 0) { ?>
                 <?php foreach ($contentList as $key => $obj) { ?>
-                    <?php if ($obj->getPosition() == 'left' && $obj->getElementType() == 'text_box') { ?>
+                    <?php if ($obj->getPosition() == 'left' && $obj->getElementType() == 'text_box' && $obj->getPageType() !== 'All') { ?>
                         <div class="row col-md-3 col-sm-6">
                             <div class="row">
                                 <a href="#"><?php echo $obj->getContent(); ?></a>
                             </div>
                         </div>
-                    <?php } elseif ($obj->getPosition() == 'center' && $obj->getElementType() == 'text_box') { ?>
+                    <?php } elseif ($obj->getPosition() == 'center' && $obj->getElementType() == 'text_box' && $obj->getPageType() !== 'All') { ?>
                         <div class="row col-md-3 col-sm-6 col-sm-offset-1">
                             <div class="row">
                                 <a href="#"><?php echo $obj->getContent(); ?></a>
                             </div>
                         </div>
-                    <?php } elseif ($obj->getPosition() == 'right' && $obj->getElementType() == 'text_box') { ?>
+                    <?php } elseif ($obj->getPosition() == 'right' && $obj->getElementType() == 'text_box' && $obj->getPageType() !== 'All') { ?>
                         <div class="row col-md-3 col-sm-6 col-sm-offset-1">
                             <div class="row">
                                 <a href="#"><?php echo $obj->getContent(); ?>t</a>
