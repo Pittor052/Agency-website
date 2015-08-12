@@ -20,12 +20,17 @@
                 <?php echo substr($product->getDescription(),0, 40); ?>
                 <br><a href="http://store.dev/admin/products/{{ product.id }}">read more...</a>
                  <p class="pull-right">
-                  <a href="/admin/products/delete/{{product.getId()}}" >
-                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
-                            class="fa fa-trash-o"></i> Delete
-                    </button>
-                 </a>
-                </p>
+                     <a href="/admin/products/delete/{{product.getId()}}">
+                         <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
+                                 class="fa fa-trash-o"></i> Delete
+                         </button>
+                     </a>
+                     <a href="/admin/products/edit/{{product.getId()}}">
+                         <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
+                                 class="fa fa-trash-o"></i> Edit
+                         </button>
+                     </a>
+                 </p>
             </span>
             </div>
             {% endfor %}
@@ -36,22 +41,33 @@
             <br><br>
             <img class="img-responsive" width="200" height="200"
                  src="{{ products.getGallery().getName()}}" alt="">
-            <a href="/admin/products/delete/{{products.getId()}}" >
-                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+            <a href="/admin/products/delete/{{products.getId()}}">
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
                         class="fa fa-trash-o"></i> Delete
                 </button>
             </a>
+            <a href="/admin/products/edit/{{products.getId()}}">
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
+                        class="fa fa-trash-o"></i> Edit
+                </button>
+            </a>
             {% else %}
-           <br> {{products.getName()}}
+            <br> {{products.getName()}}
             <img class="img-responsive" width="200" height="200"
                  src="/img/system/default_product.jpg" alt="">
-            <a href="/admin/products/delete/{{products.getId()}}" >
-                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+            <a href="/admin/products/delete/{{products.getId()}}">
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
                         class="fa fa-trash-o"></i> Delete
+                </button>
+            </a>
+            <a href="/admin/products/edit/{{products.getId()}}">
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete" method="POST"><i
+                        class="fa fa-trash-o"></i> Edit
                 </button>
             </a>
             {% endif %}
             <br>
+
             <p> <h4>Описание:</h4> {{ products.getDescription() }} </p>
             <p> <h4>В наличност:</h4> {{ products.getAvailable() }} </p>
             <p> <h4>Цена:</h4> {{ products.getPrice() }} </p>
