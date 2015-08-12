@@ -5,8 +5,13 @@
             <?php foreach ($products as $product) { ?>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <span class="">
-                <?php echo $product->getName(); ?>
+             <br>   <?php echo $product->getName(); ?>
             </span>
+                <a href="/admin/products/delete/<?php echo $product->getId(); ?>" >
+                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                            class="fa fa-trash-o"></i> Delete
+                    </button>
+                </a>
                 <a class="thumbnail" href="">
                     <?php if ($product->getGallery()) { ?>
                     <img class="img-responsive" width="200" height="200"
@@ -29,11 +34,20 @@
             <br><br>
             <img class="img-responsive" width="200" height="200"
                  src="<?php echo $products->getGallery()->getName(); ?>" alt="">
-
+            <a href="/admin/products/delete/<?php echo $products->getId(); ?>" >
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                        class="fa fa-trash-o"></i> Delete
+                </button>
+            </a>
             <?php } else { ?>
-
+           <br> <?php echo $products->getName(); ?>
             <img class="img-responsive" width="200" height="200"
                  src="/img/system/default_product.jpg" alt="">
+            <a href="/admin/products/delete/<?php echo $products->getId(); ?>" >
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                        class="fa fa-trash-o"></i> Delete
+                </button>
+            </a>
             <?php } ?>
             <br>
             <p> <h4>Описание:</h4> <?php echo $products->getDescription(); ?> </p>

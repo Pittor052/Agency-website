@@ -74,11 +74,11 @@ class ProductsController extends ControllerBase
         $product = Products::findFirst("id = '$id'");
         if (empty($id) || empty($product)) {
             $this->flashSession->error('Something went wrong, please try again!');
-            return $this->response->redirect('/admin');
+            return $this->response->redirect('/admin/products');
         }
 
         $product->delete();
         $this->flashSession->success('Product is deleted !');
-        return $this->response->redirect('/admin');
+        return $this->response->redirect('/admin/products');
     }
 }
