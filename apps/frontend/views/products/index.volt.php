@@ -31,7 +31,6 @@
         <br/>
         <?php } ?>
         <?php } elseif ($products) { ?>
-        <?php echo $products->getName(); ?>
         <?php if ($products->getGallery()) { ?>
 
         <img class="img-responsive" width="200" height="200"
@@ -40,9 +39,14 @@
         <img class="img-responsive" width="200" height="200"
              src="/img/system/default_product.jpg" alt="">
         <?php } ?>
-        <p> <h4>Описание:</h4> <?php echo $products->getDescription(); ?> </p>
-        <p> <h4>В наличност:</h4> <?php echo $products->getAvailable(); ?> </p>
-        <p> <h4>Цена:</h4> <?php echo $products->getPrice(); ?> </p>
+
+        <p> <h4>Описание: <?php echo $products->getName(); ?> </h4> <h4 style="margin-left: 3%;">    - <?php echo $products->getDescription(); ?> </h4></p>
+        <?php if ($products->getAvailable() == 1) { ?>
+        <p><h4>В наличност: Да </h4></p>
+        <?php } else { ?>
+        <p> <h4>В наличност:Не </h4></p>
+        <?php } ?>
+        <p> <h4>Цена: <?php echo $products->getPrice(); ?> лв.</h4></p>
         <?php } ?>
     </div>
 </div>
