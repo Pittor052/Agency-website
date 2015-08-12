@@ -102,11 +102,10 @@
                                     <!-- /.pull-right -->
                                 </div>
 
-                                {% for obj in contactList %}
-                                    <div class="table-responsive mailbox-messages">
-                                        <table class="table table-hover table-striped">
-                                            <tbody>
-
+                                <div class="table-responsive mailbox-messages">
+                                    <table class="table table-hover table-striped">
+                                        <tbody>
+                                        {% for obj in contactList %}
                                             <tr>
                                                 <td><input type="checkbox"/></td>
                                                 <td class="mailbox-star"><a href="#"><i
@@ -122,11 +121,11 @@
                                                 <td class="mailbox-attachment"></td>
                                                 <td class="mailbox-date">5 mins ago</td>
                                             </tr>
-                                            </tbody>
-                                        </table>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                                    </div>
-                                {% endfor %}
                                 <!-- /.box-body -->
                                 <div class="box-footer no-padding">
                                     <div class="mailbox-controls">
