@@ -40,7 +40,8 @@
              src="/img/system/default_product.jpg" alt="">
         {% endif %}
 
-        <p> <h4>Описание: {{ products.getName() }} </h4> <h4 style="margin-left: 3%;">    - {{ products.getDescription() }} </h4></p>
+        <p> <h4>Име: {{ products.getName() }} </h4><p>
+        <p><h4>Описание: {{ products.getDescription() }} </h4></p>
         {% if  products.getAvailable() == 1 %}
         <p><h4>В наличност: Да </h4></p>
         {% else %}

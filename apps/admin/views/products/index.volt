@@ -7,6 +7,7 @@
                 <span class="">
              <br>   <?php echo $product->getName(); ?>
             </span>
+
                 <a href="/admin/products/delete/{{product.getId()}}" >
                     <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                             class="fa fa-trash-o"></i> Delete
@@ -29,6 +30,13 @@
                 <span>
                 <?php echo substr($product->getDescription(),0, 40); ?>
                 <br><a href="http://store.dev/admin/products/{{ product.id }}">read more...</a>
+                 <p class="pull-right">
+                  <a href="/admin/products/delete/{{product.getId()}}" >
+                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                            class="fa fa-trash-o"></i> Delete
+                    </button>
+                 </a>
+                </p>
             </span>
             </div>
             {% endfor %}

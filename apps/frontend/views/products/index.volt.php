@@ -40,7 +40,8 @@
              src="/img/system/default_product.jpg" alt="">
         <?php } ?>
 
-        <p> <h4>Описание: <?php echo $products->getName(); ?> </h4> <h4 style="margin-left: 3%;">    - <?php echo $products->getDescription(); ?> </h4></p>
+        <p> <h4>Име: <?php echo $products->getName(); ?> </h4><p>
+        <p><h4>Описание: <?php echo $products->getDescription(); ?> </h4></p>
         <?php if ($products->getAvailable() == 1) { ?>
         <p><h4>В наличност: Да </h4></p>
         <?php } else { ?>

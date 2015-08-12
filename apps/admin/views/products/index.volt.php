@@ -7,6 +7,7 @@
                 <span class="">
              <br>   <?php echo $product->getName(); ?>
             </span>
+<<<<<<< HEAD
                 <a href="/admin/products/delete/<?php echo $product->getId(); ?>" >
                     <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                             class="fa fa-trash-o"></i> Delete
@@ -17,6 +18,8 @@
                             class="fa fa-edit"></i> Edit
                     </button>
                 </a>
+=======
+>>>>>>> 9c32b60657c04413362f543ccc2ee4fbf9692cdb
                 <a class="thumbnail" href="">
                     <?php if ($product->getGallery()) { ?>
                     <img class="img-responsive" width="200" height="200"
@@ -29,6 +32,13 @@
                 <span>
                 <?php echo substr($product->getDescription(),0, 40); ?>
                 <br><a href="http://store.dev/admin/products/<?php echo $product->id; ?>">read more...</a>
+                 <p class="pull-right">
+                  <a href="/admin/products/delete/<?php echo $product->getId(); ?>" >
+                    <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                            class="fa fa-trash-o"></i> Delete
+                    </button>
+                 </a>
+                </p>
             </span>
             </div>
             <?php } ?>
