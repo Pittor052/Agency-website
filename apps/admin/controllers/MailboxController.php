@@ -8,7 +8,7 @@
 
 namespace Bolar\Admin\Controllers;
 
-require_once __DIR__."/../../../vendor/swiftmailer/swiftmailer/lib/swift_required.php";
+require_once __DIR__ . "/../../../vendor/swiftmailer/swiftmailer/lib/swift_required.php";
 
 
 use Bolar\Admin\Controllers\ControllerBase;
@@ -59,15 +59,15 @@ class MailboxController extends ControllerBase
 
     public function sendAction()
     {
-        $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 25)
-            ->setUsername('karboratorr')
-            ->setPassword('maleopaa');
+        $transport = \Swift_SmtpTransport::newInstance('', 465, '')
+            ->setUsername('')
+            ->setPassword('');
 
         $mailer = \Swift_Mailer::newInstance($transport);
 
         $message = \Swift_Message::newInstance('Wonderful Subject')
             ->setFrom(array('karboratorr@gmail.com' => 'Nikolay Yotsov'))
-            ->setTo(array('lazar_off@gmail.com'))
+            ->setTo(array('lazar_off@yahoo.com'))
             ->setBody('Here is the message itself');
         $result = $mailer->send($message);
         var_dump($result);
