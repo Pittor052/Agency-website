@@ -66,9 +66,9 @@ class MailboxController extends ControllerBase
         $mailer = \Swift_Mailer::newInstance($transport);
 
         $message = \Swift_Message::newInstance('Wonderful Subject')
-            ->setFrom(array('karboratorr@gmail.com' => 'Nikolay Yotsov'))
-            ->setTo(array('lazar_off@yahoo.com'))
-            ->setBody('Here is the message itself');
+            ->setFrom(array('' => ''))
+            ->setTo(array(''))
+            ->setBody('');
         $result = $mailer->send($message);
         var_dump($result);
         exit;
