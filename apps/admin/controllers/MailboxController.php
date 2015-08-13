@@ -22,7 +22,7 @@ class MailboxController extends ControllerBase
 {
     public function indexAction($id = null)
     {
-        $mailerModel = Mailer::findFirst('user_id');
+        $mailerModel = Mailer::findFirst("user_id = '1'");
         if (!$mailerModel) {
             return $this->response->redirect('/admin/mailbox/connect');
         }
