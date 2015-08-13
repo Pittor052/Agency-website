@@ -119,7 +119,8 @@ class Mailer extends BaseModel
      */
     public function getPassword()
     {
-        return $this->password;
+        $crypt = new \Phalcon\Crypt();
+        return $crypt->decrypt($this->password, $this->username);
     }
 
     /**
@@ -127,7 +128,8 @@ class Mailer extends BaseModel
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        $crypt = new \Phalcon\Crypt();
+        $this->password = $crypt->encrypt($password, $this->username);
         return $this;
     }
 
