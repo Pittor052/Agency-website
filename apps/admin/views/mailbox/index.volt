@@ -112,14 +112,15 @@
                                                                 class="fa fa-star text-yellow"></i></a>
                                                 </td>
                                                 <td class="mailbox-name"><a
-                                                            href="/admin/mailbox/{{ obj.getId() }}">{{ obj.getName() }}</a>
+                                                            href="/admin/mailbox/{{ obj.getUid() }}">{{ obj.getAddresses('from')['name'] }}</a>
                                                 </td>
                                                 <td class="mailbox-subject"
-                                                    style="text-overflow: ellipsis;"><b>{{ obj.getTopic() }}</b>
-                                                    -{{ obj.getMsg() }}
+                                                    style="text-overflow: ellipsis;">
+                                                    <b>{{ obj.getAddresses('from')['address'] }}</b>
+                                                    {#-{{ obj.getMessageBody() }}#}
                                                 </td>
                                                 <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">5 mins ago</td>
+                                                <td class="mailbox-date">{{ date('d-m-Y', obj.getDate()) }} </td>
                                             </tr>
                                         {% endfor %}
                                         </tbody>
@@ -160,7 +161,7 @@
                             </div>
                             <!-- /. box -->
                         </div>
-                    {% elseif contactList.getId() %}
+                    {% elseif contactList %}
                         {{ partial("layouts/components/readMail") }}
                     {% endif %}
                     <!-- /.col -->

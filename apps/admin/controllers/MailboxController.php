@@ -9,21 +9,38 @@
 namespace Bolar\Admin\Controllers;
 
 require_once __DIR__ . "/../../../vendor/swiftmailer/swiftmailer/lib/swift_required.php";
+require_once __DIR__ . "/../../../vendor/tedivm/fetch/src/Fetch/Server.php";
+require_once __DIR__ . "/../../../vendor/tedivm/fetch/src/Fetch/Message.php";
+require_once __DIR__ . "/../../../vendor/tedivm/fetch/src/Fetch/Attachment.php";
 
 
 use Bolar\Admin\Controllers\ControllerBase;
 use Bolar\Frontend\Models\Contact;
+use Bolar\Frontend\Models\Mailer;
 
 class MailboxController extends ControllerBase
 {
     public function indexAction($id = null)
     {
-        if ($id) {
-            $contactModel = Contact::findFirst("id = '$id'");
-        } else {
-            $contactModel = Contact::find();
+        $mailerModel = Mailer::findFirst('user_id');
+        if (!$mailerModel) {
+            return $this->response->redirect('/admin/mailbox/connect');
         }
-        $this->view->setVar('contactList', $contactModel);
+
+        $server = new \Fetch\Server($mailerModel->getImap(), $mailerModel->getImapPort());
+        $server->setAuthentication($mailerModel->getUsername(), $mailerModel->getPassword());
+
+        if ($id) {
+            $messages = $server->getMessageByUid($id);
+        } else {
+            $messages = $server->getMessages(10);
+        }
+//        foreach ($messages as $message) {
+//            var_dump(get_class_methods($message));
+//            exit;
+//        }
+
+        $this->view->setVar('contactList', $messages);
     }
 
     public function readMailAction($id = null)
@@ -49,26 +66,47 @@ class MailboxController extends ControllerBase
 
     public function connectAction()
     {
-
+        if ($this->request->isPost()) {
+            $mailerModel = new Mailer();
+            if (!$mailerModel->save($this->request->getPost())) {
+                $mailerModel->setErr();
+            }
+            return $this->response->redirect('/admin/mailbox');
+        }
     }
 
     public function getMailBoxAction()
     {
+        $server = new \Fetch\Server('imap.gmail.com', 993);
+        $server->setAuthentication('karboratorr', 'maleopaa');
+        $messages = $server->getMessages(20);
+        /** @var $message \Fetch\Message */
+
+        foreach ($messages as $message) {
+            echo "Subject: {$message->getSubject()}\nBody: {$message->getMessageBody()}\n";
+        }
 
     }
 
     public function sendAction()
     {
-        $transport = \Swift_SmtpTransport::newInstance('', 465, '')
-            ->setUsername('')
-            ->setPassword('');
+        $username = null;
+        $smpt = null;
+        $password = null;
+        $email = null;
+        $sendTo = null;
+        $body = null;
+
+        $transport = \Swift_SmtpTransport::newInstance($smpt, 465, 'ssl')
+            ->setUsername($username)
+            ->setPassword($password);
 
         $mailer = \Swift_Mailer::newInstance($transport);
 
         $message = \Swift_Message::newInstance('Wonderful Subject')
-            ->setFrom(array('' => ''))
-            ->setTo(array(''))
-            ->setBody('');
+            ->setFrom(array($email => $username))
+            ->setTo(array($sendTo))
+            ->setBody($body);
         $result = $mailer->send($message);
         var_dump($result);
         exit;

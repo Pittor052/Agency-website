@@ -112,14 +112,15 @@
                                                                 class="fa fa-star text-yellow"></i></a>
                                                 </td>
                                                 <td class="mailbox-name"><a
-                                                            href="/admin/mailbox/<?php echo $obj->getId(); ?>"><?php echo $obj->getName(); ?></a>
+                                                            href="/admin/mailbox/<?php echo $obj->getUid(); ?>"><?php echo $obj->getAddresses('from')['name']; ?></a>
                                                 </td>
                                                 <td class="mailbox-subject"
-                                                    style="text-overflow: ellipsis;"><b><?php echo $obj->getTopic(); ?></b>
-                                                    -<?php echo $obj->getMsg(); ?>
+                                                    style="text-overflow: ellipsis;">
+                                                    <b><?php echo $obj->getAddresses('from')['address']; ?></b>
+                                                    
                                                 </td>
                                                 <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">5 mins ago</td>
+                                                <td class="mailbox-date"><?php echo date('d-m-Y', $obj->getDate()); ?> </td>
                                             </tr>
                                         <?php } ?>
                                         </tbody>
@@ -160,7 +161,7 @@
                             </div>
                             <!-- /. box -->
                         </div>
-                    <?php } elseif ($contactList->getId()) { ?>
+                    <?php } elseif ($contactList) { ?>
                         <?php echo $this->partial('layouts/components/readMail'); ?>
                     <?php } ?>
                     <!-- /.col -->

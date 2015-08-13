@@ -17,14 +17,14 @@
         <!-- /.box-header -->
         <div class="box-body no-padding">
             <div class="mailbox-read-info ">
-                <h3>Topic: <?php echo $contactList->getTopic(); ?></h3>
-                <h5>Name: <?php echo $contactList->getName(); ?></h5>
-                <h5>From: <?php echo $contactList->getEmail(); ?></h5>
+                <h3>Topic: <?php echo $contactList->getSubject(); ?></h3>
+                <h5>Name: <?php echo $contactList->getAddresses('from')['name']; ?></h5>
+                <h5>From: <?php echo $contactList->getAddresses('from')['address']; ?></h5>
 
 
                 <!-- /.mailbox-read-info -->
                 <div class="mailbox-read-message">
-                    <h3>Message: </h3><br><br><p><?php echo $contactList->getMsg(); ?></p>
+                    <h3>Message: </h3><br><br><p><?php echo $contactList->getMessageBody(); ?></p>
                 </div>
 
 
@@ -39,7 +39,7 @@
                         class="fa fa-share"></i> Forward
                 </button>
             </div>
-            <a href="/admin/mailbox/delete/contact/<?php echo $contactList->getId(); ?>" >
+            <a href="/admin/mailbox/delete/contact/<?php echo $contactList->getUid(); ?>" >
             <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                     class="fa fa-trash-o"></i> Delete
             </button>

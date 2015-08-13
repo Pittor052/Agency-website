@@ -113,6 +113,21 @@ $router->add('/admin/mailbox/send', array(
     'action' => 'send'
 ))->setName('admin-mailbox-send');
 
+//getMailBoxAction
+$router->add('/admin/mailbox/read', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'mailbox',
+    'action' => 'getMailBox'
+))->setName('admin-mailbox-read');
+
+$router->add('/admin/mailbox/connect', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'mailbox',
+    'action' => 'connect'
+))->setName('admin-mailbox-read');
+
 $router->add('/admin/mailbox/delete/contact/:int', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
