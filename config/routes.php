@@ -106,6 +106,13 @@ $router->add('/admin/mailbox', array(
     'action' => 'index'
 ))->setName('admin-mailbox');
 
+$router->add('/admin/mailbox/send', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'mailbox',
+    'action' => 'send'
+))->setName('admin-mailbox-send');
+
 $router->add('/admin/mailbox/delete/contact/:int', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
