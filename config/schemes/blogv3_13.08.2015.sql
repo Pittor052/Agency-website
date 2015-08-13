@@ -148,7 +148,6 @@ CREATE TABLE `mailer` (
 
 LOCK TABLES `mailer` WRITE;
 /*!40000 ALTER TABLE `mailer` DISABLE KEYS */;
-INSERT INTO `mailer` VALUES (1,'karboratorr','maleopaa','imap.gmail.com',993,'smtp.gmail.com',465,'ssl',1);
 /*!40000 ALTER TABLE `mailer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -267,4 +266,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-08-13 18:56:56
+-- Dump completed on 2015-08-13 19:46:25
