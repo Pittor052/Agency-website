@@ -3,6 +3,7 @@
         <h3 class="box-title">Compose New Message</h3>
     </div>
     <form role="form" action="/admin/mailbox/send" method="POST" enctype="multipart/form-data">
+        
         <!-- /.box-header -->
         <div class="box-body">
             <div class="form-group">
@@ -163,6 +164,10 @@
                     </li>
                 </ul>
             </div>
+            <div class="form-group">
+                <textarea id="#compose-textarea" class="form-control" style="height: 300px"></textarea>
+            </div>
         </div>
+        <!-- /.box-footer -->
     </form>
 </div>
