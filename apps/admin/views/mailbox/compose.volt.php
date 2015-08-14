@@ -32,11 +32,11 @@
                         <div class="box-body no-padding">
                             <ul class="nav nav-pills nav-stacked">
                                 <li><a href="/admin/mailbox"><i class="fa fa-inbox"></i> Inbox <span
-                                        class="label label-primary pull-right">12</span></a></li>
+                                                class="label label-primary pull-right">12</span></a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
                                 <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
                                 <li><a href="#"><i class="fa fa-filter"></i> Junk <span
-                                        class="label label-warning pull-right">65</span></a></li>
+                                                class="label label-warning pull-right">65</span></a></li>
                                 <li><a href="#"><i class="fa fa-trash-o"></i> Trash</a></li>
                             </ul>
                         </div>
@@ -67,6 +67,7 @@
                 <!-- /.col -->
                 <div class="col-md-9">
                     <!--box-->
+                    <h4><?php echo $this->partial('layouts/components/errMsg'); ?></h4>
                     <?php echo $this->partial('layouts/forms/composeForm'); ?>
                     <!-- /. box -->
                 </div>
@@ -286,7 +287,8 @@
 <!-- Bootstrap 3.3.2 JS -->
 <script src="../../../../public/templates/admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- Slimscroll -->
-<script src="../../../../public/templates/admin/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/plugins/slimScroll/jquery.slimscroll.min.js"
+        type="text/javascript"></script>
 <!-- FastClick -->
 <script src="../../../../public/templates/admin/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
 <!-- AdminLTE App -->
@@ -296,7 +298,8 @@
 <!-- iCheck -->
 <script src="../../../../public/templates/admin/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="../../../../public/templates/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"
+        type="text/javascript"></script>
 <!-- Page Script -->
 <script>
     $(function () {
