@@ -60,6 +60,11 @@ class MailboxController extends ControllerBase
         $this->view->setVar('contactList', $contact);
     }
 
+    public function composeAction()
+    {
+
+    }
+
     public function deleteContactAction($id)
     {
         $contacts = Contact::findFirst("id = '$id'");
@@ -84,6 +89,10 @@ class MailboxController extends ControllerBase
         }
     }
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 31bf07a4477dd40d0b64babd1c2c1bbb7005a4a0
     public function sendAction()
     {
         $username = null;

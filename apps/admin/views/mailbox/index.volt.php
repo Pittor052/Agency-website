@@ -15,7 +15,7 @@
         <section class="content">
             <div class="row">
                 <div class="col-md-3">
-                    <a href="compose.volt" class="btn btn-primary btn-block margin-bottom">Compose</a>
+                    <a href="/admin/mailbox/compose" class="btn btn-primary btn-block margin-bottom">Compose</a>
 
                     <div class="box box-solid">
                         <div class="box-header with-border">
