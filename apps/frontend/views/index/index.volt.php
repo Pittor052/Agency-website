@@ -19,7 +19,7 @@
         </div>
     </div>
 </div>
-<!-- End Homepage Slider -->git pull
+<!-- End Homepage Slider -->
 
 <!-- Press Coverage -->
 <div class="section">

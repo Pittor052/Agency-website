@@ -1,4 +1,9 @@
+<div class="box box-primary">
+<?php if ($url) { ?>
+<form role="form" action="<?php echo $url; ?>" method="GET" enctype="multipart/form-data">
+    <?php } else { ?>
 <form role="form" action="/admin/products/add" method="POST" enctype="multipart/form-data">
+    <?php } ?>
     <div class="box-body">
         <div class="form-group">
             <label for="file">Избери файл</label>
@@ -35,4 +40,7 @@
     <div class="box-footer">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
+
 </form>
+    </form>
+    </div>

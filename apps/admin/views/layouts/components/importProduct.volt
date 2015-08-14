@@ -6,5 +6,8 @@
     <!-- /.box-header -->
     <!-- form start -->
     {{partial("layouts/forms/productForm")}}
+    {% if editData %}
+    {{ editData.getContent() }}
+    {% endif %}
 </div><!-- /.box -->
 <!--end products form-->

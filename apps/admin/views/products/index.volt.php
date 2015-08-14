@@ -46,6 +46,11 @@
                         class="fa fa-trash-o"></i> Delete
                 </button>
             </a>
+            <a href="/admin/products/edit/<?php echo $products->getId(); ?>" >
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                        class="fa fa-trash-o"></i> Edit
+                </button>
+            </a>
             <?php } else { ?>
            <br> <?php echo $products->getName(); ?>
             <img class="img-responsive" width="200" height="200"
@@ -55,6 +60,11 @@
                         class="fa fa-trash-o"></i> Delete
                 </button>
             </a>
+            <a href="/admin/products/edit/<?php echo $products->getId(); ?>" >
+                <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
+                        class="fa fa-trash-o"></i> Edit
+                </button>
+            </a>`
             <?php } ?>
             <br>
             <p> <h4>Описание:</h4> <?php echo $products->getDescription(); ?> </p>

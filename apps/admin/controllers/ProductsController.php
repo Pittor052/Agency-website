@@ -53,21 +53,25 @@ class ProductsController extends ControllerBase
         if ($this->request->isPost()) {
             if ($this->request->hasFiles(true) == false) {
                 $this->getDi()->getFlashSession()->error('Please select an image');
-                return $this->response->redirect('/admin');
+                return $this->response->redirect('/admin/products');
+            } else if (!empty($id) && $this->request->isGet()) {
+                $productsModel = Products::findFirst("id = '$id'");
+                $productsModel
+                    ->setName($this->request->getPost()['name'])
+                    ->setCat($this->request->getPost()['category'])
+                    ->setDescription($this->request->getPost()['description'])
+                    ->setPrice($this->request->getPost()['price']);
+                if (!$productsModel->save()) {
+                    $productsModel->setErr();
+                }
+                $this->uploadToGallery($productsModel);
             }
-            $productsModel = Products::findFirst("id = '$id'");
-            $productsModel
-                ->setName($this->request->getPost()['name'])
-                ->setCat($this->request->getPost()['category'])
-                ->setDescription($this->request->getPost()['description'])
-                ->setPrice($this->request->getPost()['price']);
-            if (!$productsModel->save()) {
-                $productsModel->setErr();
-            }
-            $this->uploadToGallery($productsModel);
         }
+        $this->view->setVar('url', '/admin/products/edit/' . $id);
+        $this->view->setVar('editData', $productsModel);
         $this->view->setVar('flash', $this->flash);
     }
+
 
     public function deleteAction($id)
     {

@@ -64,7 +64,7 @@
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                         class="fa fa-trash-o"></i> Edit
                 </button>
-            </a>
+            </a>`
             {% endif %}
             <br>
             <p> <h4>Описание:</h4> {{ products.getDescription() }} </p>
