@@ -91,30 +91,45 @@ class MailboxController extends ControllerBase
     }
 
 
-
-    
-
     public function sendAction()
     {
-        $username = null;
-        $smpt = null;
-        $password = null;
-        $email = null;
-        $sendTo = null;
-        $body = null;
+        $mailerModel = Mailer::findFirst("user_id = '1'");
+        if (!$mailerModel || !$this->request->isPost()) {
+            $this->flashSession->error('Not connected email!');
+            $this->view->setVar('flash', $this->flash);
+            return $this->response->redirect('/admin/mailbox');
+        }
+
+        if (empty($this->request->getPost()['email']) || empty($this->request->getPost()['sendTo']) || empty($this->request->getPost()['body'])) {
+            $this->flashSession->error('Wrong params was given !');
+            $this->view->setVar('flash', $this->flash);
+            return $this->response->redirect('/admin/mailbox/compose');
+        }
+        $username = $mailerModel->getUsername();
+        $smpt = $mailerModel->getSmtp();
+        $password = $mailerModel->getPassword();
+        $email = $this->request->getPost()['email'];
+        $sendTo = $this->request->getPost()['sendTo'];
+        $body = $this->request->getPost()['body'];
+        $subject = $this->request->getPost()['subject'];
 
         $transport = \Swift_SmtpTransport::newInstance($smpt, 465, 'ssl')
             ->setUsername($username)
             ->setPassword($password);
 
         $mailer = \Swift_Mailer::newInstance($transport);
-
         $message = \Swift_Message::newInstance('Wonderful Subject')
             ->setFrom(array($email => $username))
             ->setTo(array($sendTo))
+            ->setSubject($subject)
             ->setBody($body);
         $result = $mailer->send($message);
-        var_dump($result);
-        exit;
+        if ($result == 1) {
+            $this->flashSession->error('Successfully send !');
+        } else {
+            $this->flashSession->error('Error, try again!');
+        }
+        $this->view->setVar('flash', $this->flash);
+        return $this->response->redirect('/admin/mailbox/compose');
     }
 }
