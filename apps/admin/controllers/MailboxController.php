@@ -88,11 +88,7 @@ class MailboxController extends ControllerBase
             return $this->response->redirect('/admin/mailbox');
         }
     }
-
-<<<<<<< HEAD
-=======
     
->>>>>>> 31bf07a4477dd40d0b64babd1c2c1bbb7005a4a0
     public function sendAction()
     {
         $username = null;
