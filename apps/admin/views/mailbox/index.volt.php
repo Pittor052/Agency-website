@@ -173,17 +173,17 @@
         <!-- /.content -->
     </div>
     <!-- jQuery 2.1.4 -->
-    <script src="/templates/admin/plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="../../../../public/templates/admin/plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
     <!-- Bootstrap 3.3.2 JS -->
-    <script src="/templates/admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../../../public/templates/admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- Slimscroll -->
-    <script src="/templates/admin/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="../../../../public/templates/admin/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
     <!-- FastClick -->
-    <script src="/templates/admin/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+    <script src="../../../../public/templates/admin/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
     <!-- AdminLTE App -->
-    <script src="/templates/admin/dist/js/app.min.js" type="text/javascript"></script>
+    <script src="../../../../public/templates/admin/dist/js/app.min.js" type="text/javascript"></script>
     <!-- iCheck -->
-    <script src="/templates/admin/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+    <script src="../../../../public/templates/admin/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
     <!-- Page Script -->
     <script>
         $(function () {
@@ -231,5 +231,5 @@
         });
     </script>
     <!-- AdminLTE for demo purposes -->
-    <script src="/templates/admin/dist/js/demo.js" type="text/javascript"></script>
+    <script src="../../../../public/templates/admin/dist/js/demo.js" type="text/javascript"></script>
 </div>
