@@ -17,6 +17,7 @@ require_once __DIR__ . "/../../../vendor/tedivm/fetch/src/Fetch/Attachment.php";
 use Bolar\Admin\Controllers\ControllerBase;
 use Bolar\Frontend\Models\Contact;
 use Bolar\Frontend\Models\Mailer;
+use Bolar\Frontend\Models\Posts;
 
 class MailboxController extends ControllerBase
 {
@@ -80,7 +81,6 @@ class MailboxController extends ControllerBase
         }
     }
 
-    
     public function sendAction()
     {
         $username = null;

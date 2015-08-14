@@ -19,81 +19,70 @@
             <div class="row">
                 <div class="col-md-3">
                     <a href="/admin/mailbox" class="btn btn-primary btn-block margin-bottom">Back to Inbox</a>
+
                     <div class="box box-solid">
                         <div class="box-header with-border">
                             <h3 class="box-title">Folders</h3>
+
                             <div class="box-tools">
-                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="box-body no-padding">
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="/admin/mailbox"><i class="fa fa-inbox"></i> Inbox <span class="label label-primary pull-right">12</span></a></li>
+                                <li><a href="/admin/mailbox"><i class="fa fa-inbox"></i> Inbox <span
+                                        class="label label-primary pull-right">12</span></a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
                                 <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
-                                <li><a href="#"><i class="fa fa-filter"></i> Junk <span class="label label-warning pull-right">65</span></a></li>
+                                <li><a href="#"><i class="fa fa-filter"></i> Junk <span
+                                        class="label label-warning pull-right">65</span></a></li>
                                 <li><a href="#"><i class="fa fa-trash-o"></i> Trash</a></li>
                             </ul>
-                        </div><!-- /.box-body -->
-                    </div><!-- /. box -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /. box -->
                     <div class="box box-solid">
                         <div class="box-header with-border">
                             <h3 class="box-title">Labels</h3>
+
                             <div class="box-tools">
-                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
                             </div>
-                        </div><!-- /.box-header -->
+                        </div>
+                        <!-- /.box-header -->
                         <div class="box-body no-padding">
                             <ul class="nav nav-pills nav-stacked">
                                 <li><a href="#"><i class="fa fa-circle-o text-red"></i> Important</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Promotions</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o text-light-blue"></i> Social</a></li>
                             </ul>
-                        </div><!-- /.box-body -->
-                    </div><!-- /.box -->
-                </div><!-- /.col -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
                 <div class="col-md-9">
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Compose New Message</h3>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <div class="form-group">
-                                <input class="form-control" placeholder="To:" />
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Subject:" />
-                            </div>
-                            <div class="form-group">
-                    <textarea id="compose-textarea" class="form-control" style="height: 300px">
-                      
-                    </textarea>
-                            </div>
-                            <div class="form-group">
-                                <div class="btn btn-default btn-file">
-                                    <i class="fa fa-paperclip"></i> Attachment
-                                    <input type="file" name="attachment" />
-                                </div>
-                                <p class="help-block">Max. 32MB</p>
-                            </div>
-                        </div><!-- /.box-body -->
-                        <div class="box-footer">
-                            <div class="pull-right">
-                                <button class="btn btn-default"><i class="fa fa-pencil"></i> Draft</button>
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send</button>
-                            </div>
-                            <button class="btn btn-default"><i class="fa fa-times"></i> Discard</button>
-                        </div><!-- /.box-footer -->
-                    </div><!-- /. box -->
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
+                    <!--box-->
+                    <?php echo $this->partial('layouts/forms/composeForm'); ?>
+                    <!-- /. box -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.2.0
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+        reserved.
     </footer>
 
     <!-- Control Sidebar -->
@@ -112,8 +101,10 @@
                     <li>
                         <a href="javascript::;">
                             <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
                                 <p>Will be 23 on April 24th</p>
                             </div>
                         </a>
@@ -121,8 +112,10 @@
                     <li>
                         <a href="javascript::;">
                             <i class="menu-icon fa fa-user bg-yellow"></i>
+
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
                                 <p>New phone +1(800)555-1234</p>
                             </div>
                         </a>
@@ -130,8 +123,10 @@
                     <li>
                         <a href="javascript::;">
                             <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
                                 <p>nora@example.com</p>
                             </div>
                         </a>
@@ -139,13 +134,16 @@
                     <li>
                         <a href="javascript::;">
                             <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
                             <div class="menu-info">
                                 <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
                                 <p>Execution time 5 seconds</p>
                             </div>
                         </a>
                     </li>
-                </ul><!-- /.control-sidebar-menu -->
+                </ul>
+                <!-- /.control-sidebar-menu -->
 
                 <h3 class="control-sidebar-heading">Tasks Progress</h3>
                 <ul class="control-sidebar-menu">
@@ -155,6 +153,7 @@
                                 Custom Template Design
                                 <span class="label label-danger pull-right">70%</span>
                             </h4>
+
                             <div class="progress progress-xxs">
                                 <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
                             </div>
@@ -166,6 +165,7 @@
                                 Update Resume
                                 <span class="label label-success pull-right">95%</span>
                             </h4>
+
                             <div class="progress progress-xxs">
                                 <div class="progress-bar progress-bar-success" style="width: 95%"></div>
                             </div>
@@ -177,6 +177,7 @@
                                 Laravel Integration
                                 <span class="label label-warning pull-right">50%</span>
                             </h4>
+
                             <div class="progress progress-xxs">
                                 <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
                             </div>
@@ -188,97 +189,114 @@
                                 Back End Framework
                                 <span class="label label-primary pull-right">68%</span>
                             </h4>
+
                             <div class="progress progress-xxs">
                                 <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
                             </div>
                         </a>
                     </li>
-                </ul><!-- /.control-sidebar-menu -->
+                </ul>
+                <!-- /.control-sidebar-menu -->
 
-            </div><!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-pane -->
             <!-- Stats tab content -->
-            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+            <!-- /.tab-pane -->
             <!-- Settings tab content -->
             <div class="tab-pane" id="control-sidebar-settings-tab">
                 <form method="post">
                     <h3 class="control-sidebar-heading">General Settings</h3>
+
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Report panel usage
-                            <input type="checkbox" class="pull-right" checked />
+                            <input type="checkbox" class="pull-right" checked/>
                         </label>
+
                         <p>
                             Some information about this general settings option
                         </p>
-                    </div><!-- /.form-group -->
+                    </div>
+                    <!-- /.form-group -->
 
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Allow mail redirect
-                            <input type="checkbox" class="pull-right" checked />
+                            <input type="checkbox" class="pull-right" checked/>
                         </label>
+
                         <p>
                             Other sets of options are available
                         </p>
-                    </div><!-- /.form-group -->
+                    </div>
+                    <!-- /.form-group -->
 
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Expose author name in posts
-                            <input type="checkbox" class="pull-right" checked />
+                            <input type="checkbox" class="pull-right" checked/>
                         </label>
+
                         <p>
                             Allow the user to show his name in blog posts
                         </p>
-                    </div><!-- /.form-group -->
+                    </div>
+                    <!-- /.form-group -->
 
                     <h3 class="control-sidebar-heading">Chat Settings</h3>
 
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Show me as online
-                            <input type="checkbox" class="pull-right" checked />
+                            <input type="checkbox" class="pull-right" checked/>
                         </label>
-                    </div><!-- /.form-group -->
+                    </div>
+                    <!-- /.form-group -->
 
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Turn off notifications
-                            <input type="checkbox" class="pull-right" />
+                            <input type="checkbox" class="pull-right"/>
                         </label>
-                    </div><!-- /.form-group -->
+                    </div>
+                    <!-- /.form-group -->
 
                     <div class="form-group">
                         <label class="control-sidebar-subheading">
                             Delete chat history
                             <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
                         </label>
-                    </div><!-- /.form-group -->
+                    </div>
+                    <!-- /.form-group -->
                 </form>
-            </div><!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-pane -->
         </div>
-    </aside><!-- /.control-sidebar -->
+    </aside>
+    <!-- /.control-sidebar -->
     <!-- Add the sidebar's background. This div must be placed
          immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
-</div><!-- ./wrapper -->
+</div>
+<!-- ./wrapper -->
 
 <!-- jQuery 2.1.4 -->
-<script src="../../plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
 <!-- Bootstrap 3.3.2 JS -->
-<script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- Slimscroll -->
-<script src="../../plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
 <!-- FastClick -->
-<script src="../../plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/app.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/dist/js/app.min.js" type="text/javascript"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/dist/js/demo.js" type="text/javascript"></script>
 <!-- iCheck -->
-<script src="../../plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+<script src="../../../../public/templates/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
 <!-- Page Script -->
 <script>
     $(function () {
