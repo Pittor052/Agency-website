@@ -3,7 +3,7 @@
 use Phalcon\Mvc\Application;
 
 ini_set('display_errors', 'On');
-error_reporting(E_ERROR);
+error_reporting(E_ALL);
 
 try {
 

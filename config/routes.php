@@ -106,6 +106,14 @@ $router->add('/admin/mailbox', array(
     'action' => 'index'
 ))->setName('admin-mailbox');
 
+
+$router->addGet('/admin/mailbox/get-unseen', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'mailbox',
+    'action' => 'unseenMessages'
+))->setName('admin-mailbox-unseen-messages');
+
 $router->add('/admin/mailbox/compose', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',

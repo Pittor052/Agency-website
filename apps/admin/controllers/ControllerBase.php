@@ -2,11 +2,44 @@
 
 namespace Bolar\Admin\Controllers;
 
+require_once __DIR__ . "/../../../vendor/swiftmailer/swiftmailer/lib/swift_required.php";
+require_once __DIR__ . "/../../../vendor/tedivm/fetch/src/Fetch/Server.php";
+require_once __DIR__ . "/../../../vendor/tedivm/fetch/src/Fetch/Message.php";
+require_once __DIR__ . "/../../../vendor/tedivm/fetch/src/Fetch/Attachment.php";
+
 use Bolar\Frontend\Models\Gallery;
 use Phalcon\Mvc\Controller;
+use Bolar\Frontend\Models\Mailer;
 
 class ControllerBase extends Controller
 {
+
+    private $mailServer;
+
+    public function setMailer()
+    {
+        //TODO get user_id from Auth, when register/login is ready
+        $mailerModel = Mailer::findFirst("user_id = '1'");
+        if ($mailerModel) {
+            $server = new \Fetch\Server($mailerModel->getImap(), $mailerModel->getImapPort());
+            $server->setAuthentication($mailerModel->getUsername(), $mailerModel->getPassword());
+            $this->mailServer = $server;
+            return true;
+        }
+        return false;
+    }
+
+    public function getMailer()
+    {
+        return $this->mailServer;
+    }
+
+    public function loadMailer()
+    {
+        $this->setMailer();
+        return $this->getMailer();
+    }
+
     /**
      * @return mixed
      */
