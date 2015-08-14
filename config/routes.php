@@ -106,6 +106,13 @@ $router->add('/admin/mailbox', array(
     'action' => 'index'
 ))->setName('admin-mailbox');
 
+$router->add('/admin/mailbox/compose', array(
+    'namespace' => 'Bolar\Admin\Controllers',
+    'module' => 'admin',
+    'controller' => 'mailbox',
+    'action' => 'compose'
+))->setName('admin-mailbox-compose');
+
 $router->add('/admin/mailbox/send', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',

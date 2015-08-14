@@ -372,7 +372,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="/admin/mailbox"><i class="fa fa-circle-o"></i> Inbox </a></li>
-                        <li><a href="/admin"><i class="fa fa-circle-o"></i> Compose </a>
+                        <li><a href="/admin/mailbox/compose"><i class="fa fa-circle-o"></i> Compose </a>
                         </li>
                     </ul>
                 </li>

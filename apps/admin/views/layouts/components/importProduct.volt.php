@@ -6,8 +6,5 @@
     <!-- /.box-header -->
     <!-- form start -->
     <?php echo $this->partial('layouts/forms/productForm'); ?>
-    
-    
-    
 </div><!-- /.box -->
 <!--end products form-->

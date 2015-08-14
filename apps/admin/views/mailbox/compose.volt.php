@@ -66,7 +66,7 @@
                             </div>
                             <div class="form-group">
                     <textarea id="compose-textarea" class="form-control" style="height: 300px">
-
+                      
                     </textarea>
                             </div>
                             <div class="form-group">

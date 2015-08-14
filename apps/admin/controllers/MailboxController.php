@@ -51,6 +51,11 @@ class MailboxController extends ControllerBase
 
     }
 
+    public function composeAction()
+    {
+
+    }
+
     public function deleteContactAction($id)
     {
         $contacts = Contact::findFirst("id = '$id'");
@@ -75,19 +80,7 @@ class MailboxController extends ControllerBase
         }
     }
 
-    public function getMailBoxAction()
-    {
-        $server = new \Fetch\Server('imap.gmail.com', 993);
-        $server->setAuthentication('karboratorr', 'maleopaa');
-        $messages = $server->getMessages(20);
-        /** @var $message \Fetch\Message */
-
-        foreach ($messages as $message) {
-            echo "Subject: {$message->getSubject()}\nBody: {$message->getMessageBody()}\n";
-        }
-
-    }
-
+    
     public function sendAction()
     {
         $username = null;
