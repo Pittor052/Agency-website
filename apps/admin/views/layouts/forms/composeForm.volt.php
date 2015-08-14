@@ -7,10 +7,13 @@
         <!-- /.box-header -->
         <div class="box-body">
             <div class="form-group">
-                <input class="form-control" placeholder="To:"/>
+                <input class="form-control" name="email" placeholder="From:"/>
             </div>
             <div class="form-group">
-                <input class="form-control" placeholder="Subject:"/>
+                <input class="form-control" name="sendTo" placeholder="To:"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="subject" placeholder="Subject:"/>
             </div>
             <div class="form-group">
                 <ul class="wysihtml5-toolbar">
@@ -165,12 +168,12 @@
                 </ul>
             </div>
             <div class="form-group">
-                <textarea id="#compose-textarea" class="form-control" style="height: 300px"></textarea>
+                <textarea id="#compose-textarea" name="body" class="form-control" style="height: 300px"></textarea>
             </div>
             <div class="form-group">
                 <div class="btn btn-default btn-file">
                     <i class="fa fa-paperclip"></i> Attachment
-                    <input type="file" name="attachment" />
+                    <input type="file" name="attachment"/>
                 </div>
                 <p class="help-block">Max. 32MB</p>
             </div>
@@ -181,7 +184,8 @@
                 <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send</button>
             </div>
             <button class="btn btn-default"><i class="fa fa-times"></i> Discard</button>
-        </div><!-- /.box-footer -->
+        </div>
+        <!-- /.box-footer -->
         <!-- /.box-footer -->
     </form>
 </div>
