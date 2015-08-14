@@ -175,16 +175,12 @@ class Products extends BaseModel
 
     public function afterSave()
     {
-
-        $productRefModel = new ProductRef();
-        $name = $this->getDI()->getRequest()->getPost()['name'];
         $productsModel = Products::find()->getLast();
-        // var_dump($id->getId());
-        //exit;
-//        var_dump($this->generateRefCode($id->getId($id->getId())));exit;
-        $productRefModel->setRef($this->generateRefCode($productsModel->getId()))->setProductId(($productsModel->getId()));
-        $productRefModel->save();
-
+        if (empty($productsModel->getRef())) {
+            $productRefModel = new ProductRef();
+            $productRefModel->setRef($this->generateRefCode($productsModel->getId()))->setProductId(($productsModel->getId()));
+            $productRefModel->save();
+        }
     }
 
     public function generateRefCode($name)

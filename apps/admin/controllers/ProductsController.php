@@ -51,20 +51,18 @@ class ProductsController extends ControllerBase
     public function editAction($id)
     {
         if ($this->request->isPost()) {
-            if ($this->request->hasFiles(true) == false) {
-                $this->getDi()->getFlashSession()->error('Please select an image');
-                return $this->response->redirect('/admin/products');
-            } else if (!empty($id) && $this->request->isGet()) {
+            if (!empty($id) && $this->request->isPost()) {
                 $productsModel = Products::findFirst("id = '$id'");
-                $productsModel
-                    ->setName($this->request->getPost()['name'])
+                $productsModel->setName($this->request->getPost()['name'])
                     ->setCat($this->request->getPost()['category'])
                     ->setDescription($this->request->getPost()['description'])
                     ->setPrice($this->request->getPost()['price']);
                 if (!$productsModel->save()) {
                     $productsModel->setErr();
+                    $this->response->redirect('/admin/products/edit/' . $id);
+                } else if ($this->request->hasFiles(true) == true) {
+                    $this->uploadToGallery($productsModel);
                 }
-                $this->uploadToGallery($productsModel);
             }
         }
         $this->view->setVar('url', '/admin/products/edit/' . $id);
