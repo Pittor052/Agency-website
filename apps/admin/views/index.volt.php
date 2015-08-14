@@ -57,86 +57,11 @@
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <!-- Messages: style can be found in dropdown.less-->
-                <li class="dropdown messages-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <li class="dropdown messages-menu" id="envelopeNotify">
+                    <a href="/admin/mailbox">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">4</span>
+                        <span class="label label-success" id="envelopeCount"></span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
-                        <li>
-                            <!-- inner menu: contains the actual data -->
-                            <ul class="menu">
-                                <li><!-- start message -->
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="/templates/admin/dist/img/user2-160x160.jpg" class="img-circle"
-                                                 alt="User Image"/>
-                                        </div>
-                                        <h4>
-                                            Support Team
-                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <!-- end message -->
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="/templates/admin/dist/img/user3-128x128.jpg" class="img-circle"
-                                                 alt="User Image"/>
-                                        </div>
-                                        <h4>
-                                            AdminLTE Design Team
-                                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="/templates/admin/dist/img/user4-128x128.jpg" class="img-circle"
-                                                 alt="User Image"/>
-                                        </div>
-                                        <h4>
-                                            Developers
-                                            <small><i class="fa fa-clock-o"></i> Today</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="/templates/admin/dist/img/user3-128x128.jpg" class="img-circle"
-                                                 alt="User Image"/>
-                                        </div>
-                                        <h4>
-                                            Sales Department
-                                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="/templates/admin/dist/img/user4-128x128.jpg" class="img-circle"
-                                                 alt="User Image"/>
-                                        </div>
-                                        <h4>
-                                            Reviewers
-                                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="footer"><a href="#">See All Messages</a></li>
-                    </ul>
                 </li>
                 <!-- Notifications: style can be found in dropdown.less -->
                 <li class="dropdown notifications-menu">
@@ -762,6 +687,7 @@
     <script src="/templates/admin/dist/js/demo.js" type="text/javascript"></script>
     <script src="https://cdn.ckeditor.com/4.4.3/standard/ckeditor.js" type="text/javascript"></script>
     <script src="/public/templates/admin/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+    <script src="/js/app.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
             // Replace the <textarea id="editor1"> with a CKEditor

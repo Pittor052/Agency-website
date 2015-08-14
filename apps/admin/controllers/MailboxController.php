@@ -20,35 +20,44 @@ use Bolar\Frontend\Models\Mailer;
 
 class MailboxController extends ControllerBase
 {
+
     public function indexAction($id = null)
     {
-        $mailerModel = Mailer::findFirst("user_id = '1'");
-        if (!$mailerModel) {
+        $this->setMailer();
+        $mailServer = $this->getMailer();
+        if (!$mailServer) {
             return $this->response->redirect('/admin/mailbox/connect');
         }
 
-        $server = new \Fetch\Server($mailerModel->getImap(), $mailerModel->getImapPort());
-        $server->setAuthentication($mailerModel->getUsername(), $mailerModel->getPassword());
-
         if ($id) {
-            $messages = $server->getMessageByUid($id);
+            $messages = $mailServer->getMessageByUid($id);
         } else {
-            $messages = $server->getMessages(10);
+            $messages = $mailServer->getOrderedMessages(1, 1, 10);
         }
-//        foreach ($messages as $message) {
-//            var_dump(get_class_methods($message));
-//            exit;
-//        }
-
         $this->view->setVar('contactList', $messages);
+    }
+
+    public function unseenMessagesAction()
+    {
+        $this->view->disable();
+        $maileServer = $this->loadMailer();
+        if ($maileServer) {
+            $messages = $maileServer->search('UNSEEN', 10);
+            if ($messages) {
+                echo json_encode(array('status' => 'new', 'count' => count($messages)));
+                exit;
+            }
+            echo json_encode(array('status' => 'clear'));
+            exit;
+        }
+        echo json_encode(array('status' => 'email not connected'));
+        exit;
     }
 
     public function readMailAction($id = null)
     {
-
         $contact = Contact::findFirst("id = '$id'");
         $this->view->setVar('contactList', $contact);
-
     }
 
     public function deleteContactAction($id)
@@ -73,19 +82,6 @@ class MailboxController extends ControllerBase
             }
             return $this->response->redirect('/admin/mailbox');
         }
-    }
-
-    public function getMailBoxAction()
-    {
-        $server = new \Fetch\Server('imap.gmail.com', 993);
-        $server->setAuthentication('karboratorr', 'maleopaa');
-        $messages = $server->getMessages(20);
-        /** @var $message \Fetch\Message */
-
-        foreach ($messages as $message) {
-            echo "Subject: {$message->getSubject()}\nBody: {$message->getMessageBody()}\n";
-        }
-
     }
 
     public function sendAction()
