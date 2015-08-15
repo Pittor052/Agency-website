@@ -106,14 +106,15 @@ class MailboxController extends ControllerBase
             return $this->response->redirect('/admin/mailbox/compose');
         }
         $username = $mailerModel->getUsername();
-        $smpt = $mailerModel->getSmtp();
+        $smtp = $mailerModel->getSmtp();
+        $smtpPort = $mailerModel->getSmtpPort();
         $password = $mailerModel->getPassword();
         $email = $this->request->getPost()['email'];
         $sendTo = $this->request->getPost()['sendTo'];
         $body = $this->request->getPost()['body'];
         $subject = $this->request->getPost()['subject'];
 
-        $transport = \Swift_SmtpTransport::newInstance($smpt, 465, 'ssl')
+        $transport = \Swift_SmtpTransport::newInstance($smtp, $smtpPort, 'ssl')
             ->setUsername($username)
             ->setPassword($password);
 
@@ -123,6 +124,8 @@ class MailboxController extends ControllerBase
             ->setTo(array($sendTo))
             ->setSubject($subject)
             ->setBody($body);
+//        var_dump($email, $sendTo, $subject, $body, $smtp, $smtpPort, $username, $password);
+//        exit;
         $result = $mailer->send($message);
         if ($result == 1) {
             $this->flashSession->error('Successfully send !');
