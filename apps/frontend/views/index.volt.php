@@ -189,8 +189,8 @@
                                 <?php echo $obj->getContent(); ?>
                             <?php } ?>
                         <?php } ?>
-                        
-                        
+                         <a href="https://www.facebook.com/pages/%D0%9F%D0%90-%D0%91%D0%BE%D0%BB%D0%B0%D1%80/1448085492170894?fref=ts"
+                         class="facebook"></a>
                     </li>
                 </ul>
             </div>
