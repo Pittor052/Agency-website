@@ -1,13 +1,16 @@
-<!--<?php if ($this->flashSession->output()) { ?>-->
-<!--<div class="errorMessage">-->
-<!--<?php echo $this->flashSession->output(); ?>-->
-<!--</div>-->
-<!--<?php } ?>-->
 
-<!--<?php if ($this->flashSession->output()) { ?>-->
-<!--<div class="errorMessage"> <?php echo $this->flashSession->output() ?></div>-->
-<!--<?php } ?>-->
-<!--sign in-->
+<?php if ($this->flashSession->output()) { ?>
+<div class="errorMessage">
+<?php echo $this->flashSession->output(); ?>
+</div>
+<?php } ?>
+
+<?php if ($this->flashSession->output()) { ?>
+<div class="errorMessage"> <?php echo $this->flashSession->output() ?></div>
+<?php } ?>
+
+<p>sign in</p>
+
 <div class="content-wrapper">
     <section class="content">
         <div class="col-sm-6" style="margin-left: 1%;">

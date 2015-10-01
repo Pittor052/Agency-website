@@ -37,7 +37,7 @@
         {% elseif product.getCat() == 6%}
 
         <br><a href="http://store.dev/products/{{ product.cat }}">Венци</a>
-        
+
         {% elseif product.getCat() == 7%}
 
 
