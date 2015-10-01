@@ -7,6 +7,53 @@
         </div>
 
 
+        {% for product in products %}
+        {% if product.getCat() == 1%}
+
+
+        <br><a href="http://store.dev/products/{{ product.cat }}">Ковчези</a>
+
+
+        {% elseif product.getCat() == 2%}
+
+
+        <br><a href="http://store.dev/products/{{ product.cat }}">Некролози</a>
+
+        {% elseif product.getCat() == 3%}
+
+
+        <br><a href="http://store.dev/products/{{ product.cat }}">Паметници</a>
+
+        {% elseif product.getCat() == 4%}
+
+
+        <br><a href="http://store.dev/products/{{ product.cat }}">Гравири</a>
+
+        {% elseif product.getCat() == 5%}
+
+
+        <br><a href="http://store.dev/products/{{ product.cat }}">Кръстове и мюсюлмански надгробни знаци</a>
+
+        {% elseif product.getCat() == 6%}
+
+        <br><a href="http://store.dev/products/{{ product.cat }}">Венци</a>
+        
+        {% elseif product.getCat() == 7%}
+
+
+        <br><a href="http://store.dev/products/{{ product.cat }}">Драперии</a>
+
+        {% elseif product.getCat() == 8%}
+
+
+        <br><a href="http://store.dev/products/{{ product.cat }}">Други</a>
+
+
+
+        {% endif %}
+        {% endfor %}
+
+
         {% if products and products is iterable %}
         {% for product in products %}
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">

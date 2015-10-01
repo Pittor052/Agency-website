@@ -7,6 +7,53 @@
         </div>
 
 
+        <?php foreach ($products as $product) { ?>
+        <?php if ($product->getCat() == 1) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Ковчези</a>
+
+
+        <?php } elseif ($product->getCat() == 2) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Некролози</a>
+
+        <?php } elseif ($product->getCat() == 3) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Паметници</a>
+
+        <?php } elseif ($product->getCat() == 4) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Гравири</a>
+
+        <?php } elseif ($product->getCat() == 5) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Кръстове и мюсюлмански надгробни знаци</a>
+
+        <?php } elseif ($product->getCat() == 6) { ?>
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Венци</a>
+        
+        <?php } elseif ($product->getCat() == 7) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Драперии</a>
+
+        <?php } elseif ($product->getCat() == 8) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Други</a>
+
+
+
+        <?php } ?>
+        <?php } ?>
+
+
         <?php if ($products && (is_array($products) || ($products) instanceof Traversable)) { ?>
         <?php foreach ($products as $product) { ?>
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
