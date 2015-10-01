@@ -5,8 +5,8 @@
                 {% for obj in contentList %}
                     <div class="row col-md-12 col-sm-12">
                         <div class="row">
-                            {% if obj.getPageType() == 'about' %}
-                                <p class="glyphicon-font">{{ obj.getContent() }}</p>
+                            {% if obj.getPageType() == 'about' and obj.getSection() !=='footer'%}
+                                <p class="">{{ obj.getContent() }}</p>
                             {% endif %}
                         </div>
                     </div>

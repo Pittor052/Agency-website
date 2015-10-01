@@ -33,7 +33,7 @@
                                 <a href="#">{{ obj.getContent() }}</a>
                             </div>
                         </div>
-                    {% elseif obj.getPosition() == 'center' and obj.getElementType() =='text_box' and  obj.getPageType() !== 'All'%}
+                    {% elseif obj.getPosition() == 'center' and obj.getElementType() =='text_box' and  obj.getPageType() !== 'All' and obj.getSection() !=='footer' %}
                         <div class="row col-md-3 col-sm-6 col-sm-offset-1">
                             <div class="row">
                                 <a href="#">{{ obj.getContent() }}</a>

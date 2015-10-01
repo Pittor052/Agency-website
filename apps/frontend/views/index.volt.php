@@ -60,7 +60,7 @@
         <!--</div>-->
         <nav id="mainmenu" class="mainmenu">
             <ul>
-                <li class="logo-wrapper"><a href="index.html"> <img src="/public/img/bolar.jpg"
+                <li class="logo-wrapper"><a href="index.volt"> <img src="/public/img/logos/200x36(oficial).png"
                                                                    alt="BOLAR"></a>
                 </li>
                 <li class="active">

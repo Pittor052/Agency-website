@@ -18,7 +18,10 @@
                             <option value="2">Некролози</option>
                             <option value="3">Паметници</option>
                             <option value="4">Гравири</option>
-                            <option value="5">Други</option>
+                            <option value="5">Кръстове и мюсюлмански надгробни знаци </option>
+                            <option value="6">Венци</option>
+                            <option value="7">Драперии</option>
+                            <option value="8">Други</option>
                         </select>
                     </div>
                 </div>

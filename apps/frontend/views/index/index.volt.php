@@ -33,7 +33,7 @@
                                 <a href="#"><?php echo $obj->getContent(); ?></a>
                             </div>
                         </div>
-                    <?php } elseif ($obj->getPosition() == 'center' && $obj->getElementType() == 'text_box' && $obj->getPageType() !== 'All') { ?>
+                    <?php } elseif ($obj->getPosition() == 'center' && $obj->getElementType() == 'text_box' && $obj->getPageType() !== 'All' && $obj->getSection() !== 'footer') { ?>
                         <div class="row col-md-3 col-sm-6 col-sm-offset-1">
                             <div class="row">
                                 <a href="#"><?php echo $obj->getContent(); ?></a>
