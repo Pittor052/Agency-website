@@ -118,13 +118,8 @@ class Gallery extends BaseModel
      */
     public function setName($name)
     {
-        $folder = $this->getDi()->getRequest()->getPost()['category'];
-        if (empty($folder)) {
-            $folder = $name;
-        }
-
-        if (!strstr($folder, '/img/products/')) {
-            $this->name = $folder . '/' . $name;
+        if (!strstr( '/img/products/',$name)) {
+            $this->name = $name;
         } else {
             $this->name = $name;
         }

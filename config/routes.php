@@ -192,6 +192,15 @@ $router->addGet('/admin/content-manager/delete/:int', array(
 ))->setName('admin-content-manager-delete');
 
 //Frontend Module
+
+//login
+$router->add('/login', array(
+    'namespace' => 'Bolar\Frontend\Controllers',
+    'module' => 'frontend',
+    'controller' => 'login',
+    'action' => 'login'
+))->setName('frontend-login');
+
 $router->addGet('/products/:int', array(
     'namespace' => 'Bolar\Frontend\Controllers',
     'module' => 'frontend',

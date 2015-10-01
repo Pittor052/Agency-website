@@ -42,7 +42,7 @@
                     <?php } elseif ($obj->getPosition() == 'right' && $obj->getElementType() == 'text_box' && $obj->getPageType() !== 'All') { ?>
                         <div class="row col-md-3 col-sm-6 col-sm-offset-1">
                             <div class="row">
-                                <a href="#"><?php echo $obj->getContent(); ?>t</a>
+                                <a href="#"><?php echo $obj->getContent(); ?></a>
                             </div>
                         </div>
                     <?php } ?>

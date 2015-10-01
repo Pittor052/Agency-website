@@ -9,7 +9,6 @@ class ControllerBase extends Controller
 {
     public function initialize()
     {
-
     }
 
     /**

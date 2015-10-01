@@ -42,7 +42,7 @@
                     {% elseif  obj.getPosition() == 'right' and obj.getElementType() =='text_box' and obj.getPageType() !== 'All' %}
                         <div class="row col-md-3 col-sm-6 col-sm-offset-1">
                             <div class="row">
-                                <a href="#">{{ obj.getContent() }}t</a>
+                                <a href="#">{{ obj.getContent() }}</a>
                             </div>
                         </div>
                     {% endif %}

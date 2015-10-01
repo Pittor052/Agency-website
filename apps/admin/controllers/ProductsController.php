@@ -70,7 +70,6 @@ class ProductsController extends ControllerBase
         $this->view->setVar('flash', $this->flash);
     }
 
-
     public function deleteAction($id)
     {
         $product = Products::findFirst("id = '$id'");

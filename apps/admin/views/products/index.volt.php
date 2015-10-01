@@ -10,10 +10,10 @@
                 <a class="thumbnail" href="">
                     <?php if ($product->getGallery()) { ?>
                     <img class="img-responsive" width="200" height="200"
-                         src="<?php echo $product->getGallery()->getName()?>" alt="">
+                         src=" <?php echo $product->getGallery(); ?> " alt="">
                     <?php } else { ?>
                     <img class="img-responsive" width="200" height="200"
-                         src="/img/system/default_product.jpg" alt="">
+                         src="/public/img/system/default_product.jpg" alt="">
                     <?php } ?>
                 </a>
                 <span>
@@ -37,7 +37,6 @@
 
             <?php } elseif ($products) { ?>
             <?php if ($products->getGallery()) { ?>
-            <br> <?php echo $products->getName(); ?>
             <br><br>
             <img class="img-responsive" width="200" height="200"
                  src="<?php echo $products->getGallery()->getName(); ?>" alt="">
@@ -54,7 +53,7 @@
             <?php } else { ?>
            <br> <?php echo $products->getName(); ?>
             <img class="img-responsive" width="200" height="200"
-                 src="/img/system/default_product.jpg" alt="">
+                 src="/public/img/system/default_product.jpg" alt="">
             <a href="/admin/products/delete/<?php echo $products->getId(); ?>" >
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                         class="fa fa-trash-o"></i> Delete

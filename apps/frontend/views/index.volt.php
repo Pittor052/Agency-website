@@ -60,8 +60,8 @@
         <!--</div>-->
         <nav id="mainmenu" class="mainmenu">
             <ul>
-                <li class="logo-wrapper"><a href="index.html"><img src="/img/mPurpose-logo.png"
-                                                                   alt="Multipurpose Twitter Bootstrap Template"></a>
+                <li class="logo-wrapper"><a href="index.html"> <img src="/public/img/bolar.jpg"
+                                                                   alt="BOLAR"></a>
                 </li>
                 <li class="active">
                     <a href="/index">Home</a>
@@ -205,7 +205,7 @@
 
 <!-- Javascripts -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/js/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
 <script src="/js/jquery.fitvids.js"></script>

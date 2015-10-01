@@ -3,7 +3,7 @@
     <div class="row">
 
         <div class="col-lg-12">
-            <h1 class="page-header">Thumbnail Gallery</h1>
+            <h1 class="page-header">Products Gallery</h1>
         </div>
 
 
@@ -11,19 +11,19 @@
         {% for product in products %}
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <span class="">
-                <?php echo $product->getName(); ?>
+                {{ product.getName() }}
             </span>
             <a class="thumbnail" href="">
                 {% if product.getGallery() %}
                 <img class="img-responsive" width="200" height="200"
-                     src="<?php echo $product->getGallery()->getName()?>" alt="">
+                     src="{{ product.getGallery().getName() }}" alt="">
                 {% else %}
                 <img class="img-responsive" width="200" height="200"
-                     src="/img/system/default_product.jpg" alt="">
+                     src="/public/img/system/default_product.jpg" alt="">
                 {% endif %}
             </a>
             <span>
-                <?php echo substr($product->getDescription(),0, 40); ?>
+                <?php echo substr( $product->getDescription(),0, 40); ?>
                 <br><a href="http://store.dev/products/{{ product.id }}">read more...</a>
             </span>
         </div>
@@ -34,20 +34,23 @@
         {% if products.getGallery() %}
 
         <img class="img-responsive" width="200" height="200"
-             src="{{ products.getGallery().getName() }}" alt="">
+             src=" {{ products.getGallery().getName() }} " alt="">
         {% else %}
         <img class="img-responsive" width="200" height="200"
-             src="/img/system/default_product.jpg" alt="">
+             src="/public/img/system/default_product.jpg" alt="">
         {% endif %}
 
-        <p> <h4>Име: {{ products.getName() }} </h4><p>
-        <p><h4>Описание: {{ products.getDescription() }} </h4></p>
-        {% if  products.getAvailable() == 1 %}
-        <p><h4>В наличност: Да </h4></p>
+        <p> <h4>Име: {{ products.getName() }} </h4>
+
+        <p>
+
+        <p><h4>Описание: {{ products.getDescription() }} </h4>
+        {% if products.getAvailable() == 1 %}
+        <p><h4>В наличност: Да </h4>
         {% else %}
-        <p> <h4>В наличност:Не </h4></p>
+        <p> <h4>В наличност:Не </h4>
         {% endif %}
-        <p> <h4>Цена: {{ products.getPrice() }} лв.</h4></p>
+        <p> <h4>Цена: {{ products.getPrice() }} лв.</h4>
         {% endif %}
     </div>
 </div>

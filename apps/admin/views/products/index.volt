@@ -10,10 +10,10 @@
                 <a class="thumbnail" href="">
                     {% if product.getGallery() %}
                     <img class="img-responsive" width="200" height="200"
-                         src="<?php echo $product->getGallery()->getName()?>" alt="">
+                         src=" {{ product.getGallery() }} " alt="">
                     {% else %}
                     <img class="img-responsive" width="200" height="200"
-                         src="/img/system/default_product.jpg" alt="">
+                         src="/public/img/system/default_product.jpg" alt="">
                     {% endif %}
                 </a>
                 <span>
@@ -37,10 +37,9 @@
 
             {% elseif products %}
             {% if products.getGallery() %}
-            <br> {{products.getName()}}
             <br><br>
             <img class="img-responsive" width="200" height="200"
-                 src="{{ products.getGallery().getName()}}" alt="">
+                 src="{{ products.getGallery().getName() }}" alt="">
             <a href="/admin/products/delete/{{products.getId()}}" >
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                         class="fa fa-trash-o"></i> Delete
@@ -54,7 +53,7 @@
             {% else %}
            <br> {{products.getName()}}
             <img class="img-responsive" width="200" height="200"
-                 src="/img/system/default_product.jpg" alt="">
+                 src="/public/img/system/default_product.jpg" alt="">
             <a href="/admin/products/delete/{{products.getId()}}" >
                 <button class="btn btn-default" data-toggle="tooltip" title="Delete"  method="POST"><i
                         class="fa fa-trash-o"></i> Delete
