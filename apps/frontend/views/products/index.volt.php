@@ -37,7 +37,7 @@
         <?php } elseif ($product->getCat() == 6) { ?>
 
         <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Венци</a>
-        
+
         <?php } elseif ($product->getCat() == 7) { ?>
 
 
