@@ -15,12 +15,12 @@
     <script src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
-
+<!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
         your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
     to
     improve your experience.</p>
-
+<![endif]-->
 <!-- Navigation & Logo-->
 <div class="mainmenu-wrapper">
     <div class="container">
