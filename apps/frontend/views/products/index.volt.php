@@ -14,9 +14,53 @@
 
                     <?php foreach ($obj->getGallery() as $gallery) { ?>
 
+<<<<<<< HEAD
                         <img class="img-responsive" width="200" height="200"
                              src="<?php echo $gallery->getName(); ?>" alt="">
                     <?php } ?>
+=======
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Ковчези</a>
+
+
+        <?php } elseif ($product->getCat() == 2) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Некролози</a>
+
+        <?php } elseif ($product->getCat() == 3) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Паметници</a>
+
+        <?php } elseif ($product->getCat() == 4) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Гравири</a>
+
+        <?php } elseif ($product->getCat() == 5) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Кръстове и мюсюлмански надгробни знаци</a>
+
+        <?php } elseif ($product->getCat() == 6) { ?>
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Венци</a>
+
+        <?php } elseif ($product->getCat() == 7) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Драперии</a>
+
+        <?php } elseif ($product->getCat() == 8) { ?>
+
+
+        <br><a href="http://store.dev/products/<?php echo $product->cat; ?>">Други</a>
+
+
+
+        <?php } ?>
+        <?php } ?>
+>>>>>>> dc18d33bec6069178930c863c583aa6542a1748e
 
                 <?php } ?>
             <?php } ?>

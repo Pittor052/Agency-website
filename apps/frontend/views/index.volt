@@ -41,13 +41,24 @@
                 <li>
                     <a href="/about">About</a>
                 </li>
+
                 <li>
                     <a href="/contact">Contact Us</a>
                 </li>
+
+                <li>
+
+                <li><a href="/authenticate">Login</a></li>
+
+                </li>
             </ul>
+
         </nav>
+
     </div>
+
 </div>
+
 {{ content() }}
 <!-- Footer -->
 <div class="footer">

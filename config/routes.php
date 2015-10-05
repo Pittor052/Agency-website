@@ -4,7 +4,7 @@
 $router->add('/admin', array(
     'namespace' => 'Bolar\Admin\Controllers',
     'module' => 'admin',
-    'controller' => 'index',
+    'controller' => 'content-manager',
     'action' => 'index'
 ))->setName('admin-enter');
 
@@ -98,66 +98,6 @@ $router->add('/admin/delete/contact/:int', array(
     'action' => 'deleteContact',
     'id' => 1
 ))->setName('admin-delete-contact');
-//MailBox
-$router->add('/admin/mailbox', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'mailbox',
-    'action' => 'index'
-))->setName('admin-mailbox');
-
-
-$router->addGet('/admin/mailbox/get-unseen', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'mailbox',
-    'action' => 'unseenMessages'
-))->setName('admin-mailbox-unseen-messages');
-
-$router->add('/admin/mailbox/compose', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'mailbox',
-    'action' => 'compose'
-))->setName('admin-mailbox-compose');
-
-$router->add('/admin/mailbox/send', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'mailbox',
-    'action' => 'send'
-))->setName('admin-mailbox-send');
-
-//getMailBoxAction
-$router->add('/admin/mailbox/read', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'mailbox',
-    'action' => 'getMailBox'
-))->setName('admin-mailbox-read');
-
-$router->add('/admin/mailbox/connect', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'mailbox',
-    'action' => 'connect'
-))->setName('admin-mailbox-read');
-
-$router->add('/admin/mailbox/delete/contact/:int', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'mailbox',
-    'action' => 'deleteContact',
-    'id' => 1
-))->setName('admin-delete-contact');
-
-$router->add('/admin/mailbox/:int', array(
-    'namespace' => 'Bolar\Admin\Controllers',
-    'module' => 'admin',
-    'controller' => 'mailbox',
-    'action' => 'index',
-    'id' => 1
-))->setName('admin-mailbox-read-mail');
 
 //ContentManagerController
 
