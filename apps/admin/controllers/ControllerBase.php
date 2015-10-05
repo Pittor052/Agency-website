@@ -57,6 +57,30 @@ class ControllerBase extends Controller
         return $this->response->redirect($url);
     }
 
+    public function saveOriginalImages($productsModel = null, $folder = null, $returnGalleryId = false, array $crop = null)
+    {
+        //If not pass folder name, get from category
+        if (empty($folder) && empty($this->request->getPost()['category'])) {
+            return false;
+        } elseif (empty($folder) && $this->request->getPost()['category']) {
+            $folder = $this->request->getPost()['category'];
+        }
+
+        $dir2 = __DIR__ . '/../../../public/img/products/' . $folder . '/original/';
+
+        if (!is_dir($dir2)) {
+            mkdir($dir2, 0777, true);
+        }
+
+        foreach ($this->request->getUploadedFiles() as $file) {
+
+            $galleryFileName = time() . '_' . $file->getName();
+
+            $fullPath = $dir2 . $galleryFileName;
+            var_dump($file->moveTo($fullPath), $fullPath);exit;
+        }
+    }
+
     /**
      * @param $productsModel
      */
@@ -69,6 +93,7 @@ class ControllerBase extends Controller
             $folder = $this->request->getPost()['category'];
         }
         $dir = __DIR__ . '/../../../public/img/products/' . $folder . '/';
+
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
         }
@@ -76,10 +101,13 @@ class ControllerBase extends Controller
         foreach ($this->request->getUploadedFiles() as $file) {
 
             $galleryFileName = time() . '_' . $file->getName();
-            $fullPath = $dir . $galleryFileName;
+
             $filePathAndName = '/img/products/' . $folder . '/' . $galleryFileName;
+            $fullPath = $dir . $galleryFileName;
+
             $file->moveTo($fullPath);
             $image = new \Phalcon\Image\Adapter\GD($fullPath);
+
             if ($crop) {
                 $image->crop($crop['width'], $crop['height']);
             } else {

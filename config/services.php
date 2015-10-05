@@ -48,3 +48,10 @@ $di['session'] = function () {
     $session->start();
     return $session;
 };
+
+$di->setShared('assets', 'Phalcon\Assets\Manager');
+
+/*
+ *  Load all assets here
+ */
+require __DIR__ . '/assets.php';

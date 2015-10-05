@@ -23,5 +23,6 @@ class ContactController extends ControllerBase
                 $this->view->setVar('flash', $this->flash);
             }
         }
+        $this->setContentToView('contact-us');
     }
 }

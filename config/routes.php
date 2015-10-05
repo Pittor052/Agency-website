@@ -209,6 +209,15 @@ $router->addGet('/products/:int', array(
     'id' => 1
 ))->setName('frontend-product');
 
+$router->add('/products/{catId}/{id}', array(
+    'namespace' => 'Bolar\Frontend\Controllers',
+    'module' => 'frontend',
+    'controller' => 'products',
+    'action' => 'index',
+    'id' => 1,
+    'catId' => 2
+))->setName('frontend-product');
+
 $router->addGet('/products', array(
     'namespace' => 'Bolar\Frontend\Controllers',
     'module' => 'frontend',

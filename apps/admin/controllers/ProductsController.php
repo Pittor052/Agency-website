@@ -43,7 +43,8 @@ class ProductsController extends ControllerBase
             if (!$productsModel->save()) {
                 $productsModel->setErr();
             }
-            $this->uploadToGallery($productsModel);
+            $this->uploadToGallery($productsModel, null, null, array('800', '800'));
+//            $this->saveOriginalImages($productsModel);
         }
         $this->view->setVar('flash', $this->flash);
     }

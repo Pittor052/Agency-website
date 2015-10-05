@@ -8,16 +8,20 @@ use Bolar\Frontend\Models\Products;
 
 class ProductsController extends ControllerBase
 {
-    public function indexAction($id = null)
+    public function indexAction($id = null, $catId = null)
     {
+
         $this->setContentToView();
-        if ($id) {
+        if ($id && is_int($id)) {
             $productModel = Products::findFirst("id = '$id'");
+        } elseif ($catId) {
+            $productModel = Products::find("cat ='$id'");
         } else {
-            $productModel = Products::find();
+            $productModel = Products::find("id = '$id'");
         }
 
         $this->view->setVar('products', $productModel);
+        $this->setContentToView('products');
     }
 
 

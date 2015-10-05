@@ -1,0 +1,19 @@
+<?php
+$di->getAssets()->collection('footer')
+    ->addJs('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    ->addJs('/js/bootstrap.min.js')
+    ->addJs('http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js')
+    ->addJs('/js/jquery.fitvids.js')
+    ->addJs('/js/jquery.sequence-min.js')
+    ->addJs('/js/jquery.bxslider.js')
+    ->addJs('/js/main-menu.js')
+    ->addJs('/js/template.js');
+
+$di->getAssets()->collection('header')
+    ->addCss('/css/bootstrap.min.css')
+    ->addCss('/css/icomoon-social.css')
+    ->addCss('/css/icomoon-social.css')
+    ->addCss('http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800')
+    ->addCss('/css/leaflet.css')
+    ->addCss('/css/leaflet.ie.css')
+    ->addCss('/css/main.css');

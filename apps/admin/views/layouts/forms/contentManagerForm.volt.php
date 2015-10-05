@@ -16,6 +16,8 @@
                             <option value="home">Home</option>
                             <option value="about">About</option>
                             <option value="services">Services</option>
+                            <option value="products">Products</option>
+                            <option value="contact-us">Contact Us</option>
                         </select>
                         <label for="category">Изберете секция!</label>
                         <select class="form-control" name="section" id="section">
@@ -43,5 +45,5 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
-        </form>
-    </div>
+    </form>
+</div>
